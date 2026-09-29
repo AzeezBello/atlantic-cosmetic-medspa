@@ -14,21 +14,29 @@ const services: [string, string, string][] = [
   ['Wellness', '/wellness', 'Weight loss & wellness, IV hydration, and regenerative treatments.'],
 ];
 
+const pillars: [string, string][] = [
+  ['Privacy by design', 'A discreet entrance and a warm, welcoming atmosphere protect your comfort from the moment you arrive.'],
+  ['A modern facility', 'Patient rooms and operating areas equipped with the latest technology and medical equipment.'],
+  ['Surgical and non-surgical, under one roof', 'Cosmetic surgery, aesthetics, hair restoration, and wellness care in a single Roswell location.'],
+  ['Care from consultation to recovery', 'Safety and comfort prioritized at every stage — before, during, and after your procedure.'],
+];
+
 export default function Home() {
   return (
     <>
       <section>
         <div className="container grid items-center gap-10 py-14 lg:grid-cols-[1.05fr_.95fr] lg:py-16">
           <div>
-            <div className="eyebrow">Cosmetic Surgery · Aesthetics · Wellness</div>
+            <div className="eyebrow">Roswell, GA · Cosmetic Surgery · Aesthetics · Wellness</div>
             <h1 className="max-w-3xl text-6xl leading-[.98] md:text-8xl">
               Confidence,
               <br />
               refined.
             </h1>
             <p className="mt-7 max-w-xl text-base leading-7 text-muted">
-              Be healthy, beautiful, and happy — a modern cosmetic surgery and MedSpa experience led by Dr.
-              Olanrewaju Ladipo, centered on individualized care and thoughtful treatment planning.
+              Be healthy, beautiful, and happy. Atlantic Cosmetic Surgery &amp; MedSpa is a modern cosmetic
+              surgery and MedSpa practice in Roswell, Georgia, offering surgical and non-surgical care centered on
+              individualized planning and your personal goals.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <a className="btn btn-primary" href={BOOKING_URL} target="_blank" rel="noopener noreferrer">
@@ -39,23 +47,23 @@ export default function Home() {
               </Link>
             </div>
             <div className="mt-10 flex flex-wrap gap-x-8 gap-y-2 text-xs uppercase tracking-[.12em] text-muted">
-              <span>Roswell, GA</span>
               <span>Established 2016</span>
+              <span>Surgical &amp; Non-Surgical</span>
               <a href="tel:+16786498280">(678) 649-8280</a>
             </div>
           </div>
           <div className="relative aspect-[4/5] overflow-hidden rounded-[32px] bg-tint">
             <Image
-              src="/images/dr-ladipo-portrait.png"
-              alt="Dr. Olanrewaju Ladipo smiling in the Atlantic Cosmetic Surgery & MedSpa clinic"
+              src="/images/clinic-facility.png"
+              alt="A treatment room at Atlantic Cosmetic Surgery & MedSpa in Roswell, GA"
               fill
               priority
               sizes="(min-width: 1024px) 45vw, 100vw"
-              className="object-cover object-[58%_40%]"
+              className="object-cover object-top"
             />
             <div className="absolute bottom-5 left-5 rounded-2xl bg-white/85 px-5 py-4 backdrop-blur">
-              <p className="text-sm">Olanrewaju Ladipo, MD</p>
-              <p className="mt-1 text-xs text-muted">Atlantic Cosmetic Surgery & MedSpa</p>
+              <p className="text-sm">Atlantic Cosmetic Surgery &amp; MedSpa</p>
+              <p className="mt-1 text-xs text-muted">1105 Upper Hembree Rd, Suite B · Roswell, GA</p>
             </div>
           </div>
         </div>
@@ -74,7 +82,7 @@ export default function Home() {
               preferences, and goals.
             </p>
             <Link href="/about" className="mt-6 inline-flex items-center gap-2 text-xs uppercase tracking-[.12em]">
-              Meet Dr. Ladipo <ArrowRight size={15} />
+              About Atlantic <ArrowRight size={15} />
             </Link>
           </div>
         </div>
@@ -82,8 +90,22 @@ export default function Home() {
 
       <section className="section">
         <div className="container">
+          <SectionHeading eyebrow="Why Atlantic" title="Built around your comfort and peace of mind." />
+          <div className="mt-12 grid gap-5 md:grid-cols-2">
+            {pillars.map(([title, text]) => (
+              <article className="card" key={title}>
+                <h3 className="text-2xl">{title}</h3>
+                <p className="mt-3 leading-6 text-muted">{text}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="section bg-white">
+        <div className="container">
           <SectionHeading
-            eyebrow="Explore Our Services"
+            eyebrow="Our Services"
             title="Care across surgery, aesthetics, and wellness."
             text="Candidacy, technique, risks, recovery, and expected outcomes are discussed during consultation."
           />
@@ -101,7 +123,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section bg-white">
+      <section className="section">
         <div className="container">
           <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
             <SectionHeading eyebrow="Results" title="Real patients. Real outcomes." text="Individual results vary." />

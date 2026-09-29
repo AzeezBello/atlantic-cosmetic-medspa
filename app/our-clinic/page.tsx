@@ -10,8 +10,8 @@ export const metadata: Metadata = {
 };
 
 const photos: [string, string][] = [
-  ['/images/clinic-facility.png', 'Dr. Ladipo standing in a treatment room at the clinic'],
-  ['/images/coolsculpting-consultation.png', 'Dr. Ladipo beside a CoolSculpting display in the consultation area'],
+  ['/images/clinic-facility.png', 'A treatment room at the clinic'],
+  ['/images/coolsculpting-consultation.png', 'The consultation area with a CoolSculpting display'],
 ];
 
 export default function OurClinicPage() {

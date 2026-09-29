@@ -1,10 +1,12 @@
 import type { Metadata } from 'next';
 import SectionHeading from '@/components/section-heading';
 import CtaBanner from '@/components/cta-banner';
+import ResultFigure from '@/components/result-figure';
+import { results } from '@/lib/results';
 
 export const metadata: Metadata = {
   title: 'Results',
-  description: 'Patient results and stories from Atlantic Cosmetic Surgery & MedSpa.',
+  description: 'Before and after results from Atlantic Cosmetic Surgery & MedSpa — hair transplant, Lipo 360, and BBL.',
 };
 
 export default function ResultsPage() {
@@ -16,11 +18,11 @@ export default function ResultsPage() {
             as="h1"
             eyebrow="Results"
             title="Your story is personal."
-            text="Patient photography and testimonials should only be published after appropriate approval and consent. Replace these placeholders with approved assets before launch."
+            text="A selection of patient results across hair restoration and body contouring. Individual results vary."
           />
-          <div className="mt-12 grid gap-5 md:grid-cols-3">
-            {[1, 2, 3].map((n) => (
-              <div key={n} className="placeholder aspect-[4/5] rounded-3xl" aria-hidden="true" />
+          <div className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+            {results.map((result) => (
+              <ResultFigure key={result.src} {...result} />
             ))}
           </div>
         </div>

@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import SectionHeading from '@/components/section-heading';
 import CtaBanner from '@/components/cta-banner';
 
@@ -7,6 +8,11 @@ export const metadata: Metadata = {
   description:
     'A premier medical spa and cosmetic surgery facility in Roswell, GA, designed for privacy, comfort, and modern care.',
 };
+
+const photos: [string, string][] = [
+  ['/images/clinic-facility.png', 'Dr. Ladipo standing in a treatment room at the clinic'],
+  ['/images/coolsculpting-consultation.png', 'Dr. Ladipo beside a CoolSculpting display in the consultation area'],
+];
 
 export default function OurClinicPage() {
   return (
@@ -34,8 +40,12 @@ export default function OurClinicPage() {
       </section>
 
       <section className="section bg-white">
-        <div className="container">
-          <div className="placeholder min-h-[420px] rounded-[30px]" aria-hidden="true" />
+        <div className="container grid gap-5 md:grid-cols-2">
+          {photos.map(([src, alt]) => (
+            <div key={src} className="relative aspect-[5/4] overflow-hidden rounded-[30px] bg-tint">
+              <Image src={src} alt={alt} fill sizes="(min-width: 768px) 50vw, 100vw" className="object-cover object-top" />
+            </div>
+          ))}
         </div>
       </section>
 

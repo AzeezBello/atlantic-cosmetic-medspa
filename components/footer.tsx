@@ -20,7 +20,7 @@ const pages: [string, string][] = [
 export default function Footer() {
   return (
     <footer className="border-t border-line bg-ink py-14 text-base">
-      <div className="container grid gap-10 md:grid-cols-[1.2fr_1fr_1fr] md:items-start">
+      <div className="container grid gap-10 md:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1fr] lg:items-start">
         <Link href="/">
           <Image
             src="/images/All White.avif"
@@ -32,6 +32,20 @@ export default function Footer() {
           <p className="mt-3 text-sm opacity-70">Cosmetic Surgery & MedSpa</p>
         </Link>
 
+        <address className="grid gap-2 text-sm not-italic opacity-80">
+          <span>
+            1105 Upper Hembree Rd, Suite B
+            <br />
+            Roswell, GA 30076
+          </span>
+          <a href="tel:+16786498280" className="hover:opacity-70">
+            (678) 649-8280
+          </a>
+          <a href="mailto:info@drladipo.com" className="hover:opacity-70">
+            info@drladipo.com
+          </a>
+        </address>
+
         <nav className="flex flex-col gap-3 text-sm opacity-80">
           {pages.map(([label, href]) => (
             <Link key={href} href={href} className="hover:opacity-70">
@@ -40,7 +54,7 @@ export default function Footer() {
           ))}
         </nav>
 
-        <div className="flex flex-col items-start gap-4 md:items-end">
+        <div className="flex flex-col items-start gap-4 lg:items-end">
           <div className="flex items-center gap-4">
             {social.map(([label, href]) => {
               const Icon = icons[label as keyof typeof icons];

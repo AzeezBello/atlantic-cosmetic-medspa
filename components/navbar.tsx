@@ -23,14 +23,14 @@ export default function Navbar() {
   return (
     <header className="fixed top-0 z-50 w-full border-b border-black/5 bg-base/90 backdrop-blur">
       <div className="container flex h-20 items-center justify-between">
-        <Link href="/" className="inline-flex items-center rounded-full bg-ink px-4 py-2">
+        <Link href="/" className="inline-flex items-center rounded-full bg-ink px-5 py-2">
           <Image
             src="/images/All White.avif"
             alt="Atlantic Cosmetic Surgery & MedSpa"
             width={250}
             height={121}
             priority
-            className="h-6 w-auto"
+            className="h-8 w-auto"
           />
         </Link>
         <nav className="hidden items-center gap-7 lg:flex">

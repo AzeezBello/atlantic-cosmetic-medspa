@@ -14,9 +14,7 @@ export default function ConsultationForm() {
   if (submitted) {
     return (
       <div className="card" role="status">
-        <p className="text-lg leading-7">
-          Thank you — we&apos;ve received your message and will be in touch soon.
-        </p>
+        <p className="text-lg leading-7">Thank you — we&apos;ve received your message and will be in touch soon.</p>
       </div>
     );
   }
@@ -26,14 +24,7 @@ export default function ConsultationForm() {
       <label className="sr-only" htmlFor="consultation-name">
         Name
       </label>
-      <input
-        id="consultation-name"
-        name="name"
-        className="h-14 rounded-xl border border-line bg-white px-4 outline-none"
-        placeholder="Name"
-        autoComplete="name"
-        required
-      />
+      <input id="consultation-name" name="name" className="field" placeholder="Name" autoComplete="name" required />
 
       <label className="sr-only" htmlFor="consultation-email">
         Email
@@ -41,7 +32,7 @@ export default function ConsultationForm() {
       <input
         id="consultation-email"
         name="email"
-        className="h-14 rounded-xl border border-line bg-white px-4 outline-none"
+        className="field"
         placeholder="Email"
         type="email"
         autoComplete="email"
@@ -51,13 +42,7 @@ export default function ConsultationForm() {
       <label className="sr-only" htmlFor="consultation-interest">
         Interest
       </label>
-      <select
-        id="consultation-interest"
-        name="interest"
-        className="h-14 rounded-xl border border-line bg-white px-4 outline-none"
-        defaultValue=""
-        required
-      >
+      <select id="consultation-interest" name="interest" className="field" defaultValue="" required>
         <option value="" disabled>
           Interest
         </option>
@@ -70,12 +55,7 @@ export default function ConsultationForm() {
       <label className="sr-only" htmlFor="consultation-goals">
         Tell us about your goals
       </label>
-      <textarea
-        id="consultation-goals"
-        name="goals"
-        className="min-h-36 rounded-xl border border-line bg-white p-4 outline-none"
-        placeholder="Tell us about your goals"
-      />
+      <textarea id="consultation-goals" name="goals" className="field" placeholder="Tell us about your goals" />
 
       <button type="submit" className="btn btn-primary w-full sm:w-fit">
         Send Message

@@ -24,35 +24,38 @@ const pillars: [string, string][] = [
 export default function Home() {
   return (
     <>
-      <section>
+      <section className="home-hero overflow-hidden">
         <div className="container grid items-center gap-10 py-14 lg:grid-cols-[1.05fr_.95fr] lg:py-16">
-          <div>
-            <div className="eyebrow">Roswell, GA · Cosmetic Surgery · Aesthetics · Wellness</div>
-            <h1 className="max-w-3xl text-6xl leading-[.98] md:text-8xl">
+          <div className="hero-enter">
+            <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-line bg-white/70 px-4 py-2 text-[10px] uppercase tracking-[.14em] text-muted shadow-sm sm:text-[11px]">
+              <span className="h-1.5 w-1.5 rounded-full bg-sky" />
+              Roswell, GA <span aria-hidden="true">·</span> Cosmetic surgery, aesthetics &amp; wellness
+            </div>
+            <h1 className="max-w-3xl text-[clamp(3.25rem,12vw,6rem)] leading-[.96] tracking-[-.045em]">
               Confidence,
               <br />
               refined.
             </h1>
-            <p className="mt-7 max-w-xl text-base leading-7 text-muted">
+            <p className="mt-6 max-w-xl text-base leading-7 text-muted sm:mt-7 sm:text-lg sm:leading-8">
               Be healthy, beautiful, and happy. Atlantic Cosmetic Surgery &amp; MedSpa is a modern cosmetic
               surgery and MedSpa practice in Roswell, Georgia, offering surgical and non-surgical care centered on
               individualized planning and your personal goals.
             </p>
-            <div className="mt-8 flex flex-wrap gap-3">
-              <a className="btn btn-primary" href={BOOKING_URL} target="_blank" rel="noopener noreferrer">
+            <div className="mt-7 flex flex-col gap-3 sm:mt-8 sm:flex-row sm:flex-wrap">
+              <a className="btn btn-primary w-full sm:w-auto" href={BOOKING_URL} target="_blank" rel="noopener noreferrer">
                 Book a Consultation
               </a>
-              <Link className="btn btn-outline" href="/cosmetic-surgery">
+              <Link className="btn btn-outline w-full sm:w-auto" href="/cosmetic-surgery">
                 Explore Treatments
               </Link>
             </div>
-            <div className="mt-10 flex flex-wrap gap-x-8 gap-y-2 text-xs uppercase tracking-[.12em] text-muted">
+            <div className="mt-8 flex flex-wrap gap-x-6 gap-y-2 text-[10px] uppercase tracking-[.12em] text-muted sm:mt-10 sm:text-xs">
               <span>Established 2016</span>
               <span>Surgical &amp; Non-Surgical</span>
               <a href="tel:+16786498280">(678) 649-8280</a>
             </div>
           </div>
-          <div className="relative aspect-[4/5] overflow-hidden rounded-[32px] bg-tint">
+          <div className="hero-enter-delay hero-media relative aspect-[4/5] overflow-hidden rounded-[28px] bg-tint shadow-[0_24px_64px_rgba(18,41,59,0.14)] sm:rounded-[36px]">
             <Image
               src="/images/clinic-facility.png"
               alt="A treatment room at Atlantic Cosmetic Surgery & MedSpa in Roswell, GA"
@@ -61,9 +64,9 @@ export default function Home() {
               sizes="(min-width: 1024px) 45vw, 100vw"
               className="object-cover object-top"
             />
-            <div className="absolute bottom-5 left-5 rounded-2xl bg-white/85 px-5 py-4 backdrop-blur">
+            <div className="absolute bottom-4 left-4 right-4 rounded-2xl border border-white/70 bg-white/85 px-4 py-3 backdrop-blur-md sm:bottom-5 sm:left-5 sm:right-auto sm:px-5 sm:py-4">
               <p className="text-sm">Atlantic Cosmetic Surgery &amp; MedSpa</p>
-              <p className="mt-1 text-xs text-muted">1105 Upper Hembree Rd, Suite B · Roswell, GA</p>
+              <p className="mt-1 text-xs leading-5 text-muted">1105 Upper Hembree Rd, Suite B · Roswell, GA</p>
             </div>
           </div>
         </div>

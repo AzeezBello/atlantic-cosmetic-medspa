@@ -1,11 +1,11 @@
 import { ArrowRight } from 'lucide-react';
-import Image from 'next/image';
 import Link from 'next/link';
+import Hero from '@/components/hero';
+import Reveal from '@/components/reveal';
 import SectionHeading from '@/components/section-heading';
 import CtaBanner from '@/components/cta-banner';
 import ResultFigure from '@/components/result-figure';
-import { BOOKING_URL } from '@/lib/site';
-import { results } from '@/lib/results';
+import { featuredResults } from '@/lib/results';
 
 const services: [string, string, string][] = [
   ['Cosmetic Surgery', '/cosmetic-surgery', 'Lipo 360, BBL, J-Plasma, and other body and facial procedures.'],
@@ -21,85 +21,63 @@ const pillars: [string, string][] = [
   ['Care from consultation to recovery', 'Safety and comfort prioritized at every stage — before, during, and after your procedure.'],
 ];
 
+const facts: [string, string][] = [
+  ['2016', 'Established'],
+  ['4', 'Areas of care'],
+  ['Roswell', 'Georgia'],
+];
+
 export default function Home() {
   return (
     <>
-      <section className="home-hero overflow-hidden">
-        <div className="container grid items-center gap-10 py-14 lg:grid-cols-[1.05fr_.95fr] lg:py-16">
-          <div className="hero-enter">
-            <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-line bg-white/70 px-4 py-2 text-[10px] uppercase tracking-[.14em] text-muted shadow-sm sm:text-[11px]">
-              <span className="h-1.5 w-1.5 rounded-full bg-sky" />
-              Roswell, GA <span aria-hidden="true">·</span> Cosmetic surgery, aesthetics &amp; wellness
-            </div>
-            <h1 className="max-w-3xl text-[clamp(3.25rem,12vw,6rem)] leading-[.96] tracking-[-.045em]">
-              Confidence,
-              <br />
-              refined.
-            </h1>
-            <p className="mt-6 max-w-xl text-base leading-7 text-muted sm:mt-7 sm:text-lg sm:leading-8">
-              Be healthy, beautiful, and happy. Atlantic Cosmetic Surgery &amp; MedSpa is a modern cosmetic
-              surgery and MedSpa practice in Roswell, Georgia, offering surgical and non-surgical care centered on
-              individualized planning and your personal goals.
-            </p>
-            <div className="mt-7 flex flex-col gap-3 sm:mt-8 sm:flex-row sm:flex-wrap">
-              <a className="btn btn-primary w-full sm:w-auto" href={BOOKING_URL} target="_blank" rel="noopener noreferrer">
-                Book a Consultation
-              </a>
-              <Link className="btn btn-outline w-full sm:w-auto" href="/cosmetic-surgery">
-                Explore Treatments
-              </Link>
-            </div>
-            <div className="mt-8 flex flex-wrap gap-x-6 gap-y-2 text-[10px] uppercase tracking-[.12em] text-muted sm:mt-10 sm:text-xs">
-              <span>Established 2016</span>
-              <span>Surgical &amp; Non-Surgical</span>
-              <a href="tel:+16786498280">(678) 649-8280</a>
-            </div>
-          </div>
-          <div className="hero-enter-delay hero-media relative aspect-[4/5] overflow-hidden rounded-[28px] bg-tint shadow-[0_24px_64px_rgba(18,41,59,0.14)] sm:rounded-[36px]">
-            <Image
-              src="/images/clinic-facility.png"
-              alt="A treatment room at Atlantic Cosmetic Surgery & MedSpa in Roswell, GA"
-              fill
-              priority
-              sizes="(min-width: 1024px) 45vw, 100vw"
-              className="object-cover object-top"
-            />
-            <div className="absolute bottom-4 left-4 right-4 rounded-2xl border border-white/70 bg-white/85 px-4 py-3 backdrop-blur-md sm:bottom-5 sm:left-5 sm:right-auto sm:px-5 sm:py-4">
-              <p className="text-sm">Atlantic Cosmetic Surgery &amp; MedSpa</p>
-              <p className="mt-1 text-xs leading-5 text-muted">1105 Upper Hembree Rd, Suite B · Roswell, GA</p>
-            </div>
-          </div>
-        </div>
-      </section>
+      <Hero />
 
-      <section className="section bg-white">
-        <div className="container grid gap-14 lg:grid-cols-2 lg:items-center">
-          <SectionHeading
-            eyebrow="The Atlantic Approach"
-            title="Personalized care. Modern techniques. Thoughtful results."
-          />
-          <div>
+      <section id="approach" className="section scroll-mt-20">
+        <div className="container grid gap-12 lg:grid-cols-[.95fr_1.05fr] lg:gap-20">
+          <Reveal>
+            <SectionHeading
+              eyebrow="The Atlantic Approach"
+              title="Personalized care. Modern techniques. Thoughtful results."
+            />
+          </Reveal>
+          <Reveal delay={120}>
             <p className="text-lg leading-8 text-muted">
               Every treatment begins with understanding what you want to change and why. Our approach combines
               aesthetic planning with individualized consultation so your care can be tailored to your anatomy,
               preferences, and goals.
             </p>
-            <Link href="/about" className="mt-6 inline-flex items-center gap-2 text-xs uppercase tracking-[.12em]">
+            <div className="mt-10 grid grid-cols-3 gap-6 border-t border-line pt-8">
+              {facts.map(([value, label]) => (
+                <div key={label}>
+                  <p className="font-serif text-3xl leading-none sm:text-4xl">{value}</p>
+                  <p className="mt-2 text-[10px] uppercase tracking-[.14em] text-muted sm:text-xs">{label}</p>
+                </div>
+              ))}
+            </div>
+            <Link href="/about" className="link-arrow mt-8 inline-flex items-center gap-2 text-xs uppercase tracking-[.12em]">
               About Atlantic <ArrowRight size={15} />
             </Link>
-          </div>
+          </Reveal>
         </div>
       </section>
 
-      <section className="section">
+      <section className="section bg-tint">
         <div className="container">
-          <SectionHeading eyebrow="Why Atlantic" title="Built around your comfort and peace of mind." />
-          <div className="mt-12 grid gap-5 md:grid-cols-2">
-            {pillars.map(([title, text]) => (
-              <article className="card" key={title}>
-                <h3 className="text-2xl">{title}</h3>
-                <p className="mt-3 leading-6 text-muted">{text}</p>
-              </article>
+          <Reveal>
+            <div className="max-w-2xl">
+              <div className="eyebrow">Why Atlantic</div>
+              <h2 className="text-4xl leading-tight md:text-5xl">Built around your comfort and peace of mind.</h2>
+            </div>
+          </Reveal>
+          <div className="mt-14 grid gap-10 md:grid-cols-2 lg:grid-cols-4 lg:gap-8">
+            {pillars.map(([title, text], index) => (
+              <Reveal key={title} delay={index * 90}>
+                <article className="border-t border-line pt-6">
+                  <span className="text-xs tracking-[.14em] text-blue">0{index + 1}</span>
+                  <h3 className="mt-4 text-2xl leading-snug">{title}</h3>
+                  <p className="mt-3 leading-6 text-muted">{text}</p>
+                </article>
+              </Reveal>
             ))}
           </div>
         </div>
@@ -107,20 +85,25 @@ export default function Home() {
 
       <section className="section bg-white">
         <div className="container">
-          <SectionHeading
-            eyebrow="Our Services"
-            title="Care across surgery, aesthetics, and wellness."
-            text="Candidacy, technique, risks, recovery, and expected outcomes are discussed during consultation."
-          />
+          <Reveal>
+            <SectionHeading
+              eyebrow="Our Services"
+              title="Care across surgery, aesthetics, and wellness."
+              text="Candidacy, technique, risks, recovery, and expected outcomes are discussed during consultation."
+            />
+          </Reveal>
           <div className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
-            {services.map(([name, href, desc]) => (
-              <Link className="card flex flex-col" key={href} href={href}>
-                <h3 className="text-2xl">{name}</h3>
-                <p className="mt-3 flex-1 leading-6 text-muted">{desc}</p>
-                <span className="mt-7 inline-flex items-center gap-2 text-xs uppercase tracking-[.12em]">
-                  Learn more <ArrowRight size={15} />
-                </span>
-              </Link>
+            {services.map(([name, href, desc], index) => (
+              <Reveal key={href} delay={index * 90} className="flex">
+                <Link className="card group flex w-full flex-col" href={href}>
+                  <span className="text-xs tracking-[.14em] text-muted">0{index + 1}</span>
+                  <h3 className="mt-5 text-2xl">{name}</h3>
+                  <p className="mt-3 flex-1 leading-6 text-muted">{desc}</p>
+                  <span className="link-arrow mt-7 inline-flex items-center gap-2 text-xs uppercase tracking-[.12em]">
+                    Learn more <ArrowRight size={15} />
+                  </span>
+                </Link>
+              </Reveal>
             ))}
           </div>
         </div>
@@ -128,15 +111,19 @@ export default function Home() {
 
       <section className="section">
         <div className="container">
-          <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
-            <SectionHeading eyebrow="Results" title="Real patients. Real outcomes." text="Individual results vary." />
-            <Link href="/results" className="inline-flex items-center gap-2 text-xs uppercase tracking-[.12em]">
-              View all results <ArrowRight size={15} />
-            </Link>
-          </div>
-          <div className="mt-12 grid gap-5 md:grid-cols-3">
-            {results.slice(0, 3).map((result) => (
-              <ResultFigure key={result.src} {...result} />
+          <Reveal>
+            <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
+              <SectionHeading eyebrow="Results" title="Real patients. Real outcomes." text="Individual results vary." />
+              <Link href="/results" className="link-arrow inline-flex items-center gap-2 text-xs uppercase tracking-[.12em]">
+                View all results <ArrowRight size={15} />
+              </Link>
+            </div>
+          </Reveal>
+          <div className="mt-12 grid items-start gap-5 md:grid-cols-3">
+            {featuredResults.map((result, index) => (
+              <Reveal key={result.src} delay={index * 110}>
+                <ResultFigure {...result} />
+              </Reveal>
             ))}
           </div>
         </div>

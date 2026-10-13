@@ -1,5 +1,6 @@
-import { ArrowLeft, ArrowRight } from 'lucide-react';
+import { ArrowLeft } from 'lucide-react';
 import Link from 'next/link';
+import BookButton from '@/components/book-button';
 
 const helpfulLinks = [
   ['Cosmetic surgery', '/cosmetic-surgery'],
@@ -11,7 +12,7 @@ export default function NotFound() {
   return (
     <section className="section flex min-h-[calc(78svh-5rem)] items-center overflow-hidden">
       <div className="container">
-        <div className="relative mx-auto max-w-4xl overflow-hidden rounded-[28px] border border-line bg-white/75 px-6 py-12 text-center shadow-[0_24px_80px_rgba(18,41,59,0.08)] sm:rounded-[36px] sm:px-12 sm:py-16 md:px-20 md:py-20">
+        <div className="relative mx-auto max-w-4xl overflow-hidden rounded-[28px] border border-line bg-white px-6 py-12 text-center shadow-[0_24px_80px_rgba(11,31,51,0.06)] sm:rounded-[36px] sm:px-12 sm:py-16 md:px-20 md:py-20">
           <div
             aria-hidden="true"
             className="pointer-events-none absolute -right-16 -top-24 h-64 w-64 rounded-full bg-tint/80 blur-3xl"
@@ -32,10 +33,7 @@ export default function NotFound() {
                 <ArrowLeft aria-hidden="true" className="mr-2" size={16} />
                 Back to home
               </Link>
-              <Link href="/consultation" className="btn btn-outline w-full sm:w-auto">
-                Contact our team
-                <ArrowRight aria-hidden="true" className="ml-2" size={16} />
-              </Link>
+              <BookButton className="btn btn-outline w-full sm:w-auto" />
             </div>
 
             <nav aria-label="Explore our services" className="mt-10 border-t border-line/80 pt-6">

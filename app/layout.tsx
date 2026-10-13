@@ -14,8 +14,11 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="en" data-scroll-behavior="smooth">
       <body>
+        <noscript>
+          <style>{'[data-reveal]{opacity:1!important;transform:none!important}'}</style>
+        </noscript>
         <Navbar />
         <main className="pt-20">{children}</main>
         <Footer />

@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import Image from 'next/image';
 import CtaBanner from '@/components/cta-banner';
 import ResultFigure from '@/components/result-figure';
-import { BOOKING_URL } from '@/lib/site';
+import BookButton from '@/components/book-button';
 import { getProcedure } from '@/lib/procedures';
 import { resultsFor } from '@/lib/results';
 
@@ -38,9 +38,7 @@ export default function HairRestorationPage() {
                 <p key={paragraph}>{paragraph}</p>
               ))}
             </div>
-            <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer" className="btn btn-primary mt-8">
-              Book a Consultation
-            </a>
+            <BookButton className="btn btn-primary mt-8" />
           </div>
         </div>
       </section>

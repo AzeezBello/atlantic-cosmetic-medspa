@@ -9,9 +9,11 @@ export const metadata: Metadata = {
     'A premier medical spa and cosmetic surgery facility in Roswell, GA, designed for privacy, comfort, and modern care.',
 };
 
-const photos: [string, string][] = [
-  ['/images/clinic-facility.png', 'A treatment room at the clinic'],
-  ['/images/coolsculpting-consultation.png', 'The consultation area with a CoolSculpting display'],
+const details: [string, string][] = [
+  ['Address', '1105 Upper Hembree Rd, Suite B, Roswell, GA 30076'],
+  ['Phone', '(678) 649-8280'],
+  ['Established', '2016, originally in Smyrna, GA'],
+  ['Entrance', 'Discreet, for patient privacy'],
 ];
 
 export default function OurClinicPage() {
@@ -40,12 +42,26 @@ export default function OurClinicPage() {
       </section>
 
       <section className="section bg-white">
-        <div className="container grid gap-5 md:grid-cols-2">
-          {photos.map(([src, alt]) => (
-            <div key={src} className="relative aspect-[5/4] overflow-hidden rounded-[30px] bg-tint">
-              <Image src={src} alt={alt} fill sizes="(min-width: 768px) 50vw, 100vw" className="object-cover object-top" />
-            </div>
-          ))}
+        <div className="container grid gap-5 lg:grid-cols-[1.1fr_.9fr]">
+          <div className="relative aspect-[4/5] overflow-hidden rounded-[30px] bg-tint sm:aspect-[5/4]">
+            <Image
+              src="/images/clinic-team.png"
+              alt="The Atlantic Cosmetic Surgery & MedSpa team standing together in the clinic"
+              fill
+              sizes="(min-width: 1024px) 55vw, 100vw"
+              className="object-cover object-top"
+            />
+          </div>
+          <dl className="card grid content-center gap-6">
+            {details.map(([label, value]) => (
+              <div key={label} className="border-b border-line pb-5 last:border-b-0 last:pb-0">
+                <dt className="text-[10px] uppercase tracking-[.14em] text-muted sm:text-xs">{label}</dt>
+                <dd className="mt-1.5 text-lg leading-7">
+                  {label === 'Phone' ? <a href="tel:+16786498280">{value}</a> : value}
+                </dd>
+              </div>
+            ))}
+          </dl>
         </div>
       </section>
 

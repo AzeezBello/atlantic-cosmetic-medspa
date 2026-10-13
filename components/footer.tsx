@@ -1,6 +1,7 @@
 import { Facebook, Instagram } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { BOOKING_URL } from '@/lib/site';
 
 const social: [string, string][] = [
   ['Instagram', 'https://www.instagram.com/realdratl/'],
@@ -14,12 +15,11 @@ const pages: [string, string][] = [
   ['Our Clinic', '/our-clinic'],
   ['FAQs', '/faqs'],
   ['Payment Plans', '/payment-plans'],
-  ['Contact', '/consultation'],
 ];
 
 export default function Footer() {
   return (
-    <footer className="border-t border-line bg-ink py-14 text-base">
+    <footer className="bg-navy py-16 text-white">
       <div className="container grid gap-10 md:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1fr] lg:items-start">
         <Link href="/">
           <Image
@@ -52,6 +52,9 @@ export default function Footer() {
               {label}
             </Link>
           ))}
+          <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer" className="hover:opacity-70">
+            Book Online
+          </a>
         </nav>
 
         <div className="flex flex-col items-start gap-4 lg:items-end">

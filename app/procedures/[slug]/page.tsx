@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import CtaBanner from '@/components/cta-banner';
 import ResultFigure from '@/components/result-figure';
-import { BOOKING_URL } from '@/lib/site';
+import BookButton from '@/components/book-button';
 import { getProcedure, procedures } from '@/lib/procedures';
 import { resultsFor } from '@/lib/results';
 
@@ -37,9 +37,7 @@ export default async function ProcedurePage({ params }: { params: Promise<{ slug
               <p key={paragraph}>{paragraph}</p>
             ))}
           </div>
-          <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer" className="btn btn-primary mt-10">
-            Book a Consultation
-          </a>
+          <BookButton className="btn btn-primary mt-10" />
         </div>
       </section>
 
@@ -49,7 +47,7 @@ export default async function ProcedurePage({ params }: { params: Promise<{ slug
             <div className="eyebrow">Results</div>
             <h2 className="text-4xl leading-tight md:text-5xl">{procedure.name} before and after.</h2>
             <p className="mt-4 text-sm text-muted">Individual results vary.</p>
-            <div className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+            <div className="mt-10 grid items-start gap-5 md:grid-cols-2 lg:grid-cols-3">
               {gallery.map((result) => (
                 <ResultFigure key={result.src} {...result} />
               ))}

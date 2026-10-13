@@ -6,7 +6,7 @@ import { results } from '@/lib/results';
 
 export const metadata: Metadata = {
   title: 'Results',
-  description: 'Before and after results from Atlantic Cosmetic Surgery & MedSpa — hair transplant, Lipo 360, and BBL.',
+  description: 'Before and after results from Atlantic Cosmetic Surgery & MedSpa — Lipo 360, BBL, injectables, and hair transplant.',
 };
 
 export default function ResultsPage() {
@@ -18,9 +18,9 @@ export default function ResultsPage() {
             as="h1"
             eyebrow="Results"
             title="Your story is personal."
-            text="A selection of patient results across hair restoration and body contouring. Individual results vary."
+            text="A selection of patient results across body contouring, aesthetics, and hair restoration. Individual results vary."
           />
-          <div className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-12 grid items-start gap-5 md:grid-cols-2 lg:grid-cols-3">
             {results.map((result) => (
               <ResultFigure key={result.src} {...result} />
             ))}

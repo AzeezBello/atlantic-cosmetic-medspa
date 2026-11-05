@@ -1,12 +1,13 @@
 import type { Metadata } from 'next';
-import SectionHeading from '@/components/section-heading';
 import CtaBanner from '@/components/cta-banner';
 import ResultFigure from '@/components/result-figure';
+import SectionHeading from '@/components/section-heading';
 import { results } from '@/lib/results';
 
 export const metadata: Metadata = {
-  title: 'Results',
-  description: 'Before and after results from Atlantic Cosmetic Surgery & MedSpa — Lipo 360, BBL, injectables, and hair transplant.',
+  title: 'Male Patient Results',
+  description:
+    'Verified male before and after results from Atlantic Men’s Surgery & MedSpa — Male Lipo 360 torso contouring and FUE hair transplantation.',
 };
 
 export default function ResultsPage() {
@@ -16,11 +17,11 @@ export default function ResultsPage() {
         <div className="container">
           <SectionHeading
             as="h1"
-            eyebrow="Results"
-            title="Your story is personal."
-            text="A selection of patient results across body contouring, aesthetics, and hair restoration. Individual results vary."
+            index="01 / Male Clinical Gallery"
+            title="Real male patients. Verified outcomes."
+            text="A curated clinical gallery of male torso sculpting and FUE hair restoration performed at our Roswell practice. Individual results vary."
           />
-          <div className="mt-12 grid items-start gap-5 md:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-12 grid items-start gap-6 md:grid-cols-2">
             {results.map((result) => (
               <ResultFigure key={result.src} {...result} />
             ))}

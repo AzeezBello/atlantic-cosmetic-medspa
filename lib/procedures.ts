@@ -1,4 +1,4 @@
-export type Category = 'Cosmetic Surgery' | 'Aesthetics' | 'Wellness' | 'Hair Restoration';
+export type Category = 'Cosmetic Surgery' | 'Hair Restoration' | 'Aesthetics' | 'Wellness';
 
 export type Procedure = {
   slug: string;
@@ -6,144 +6,45 @@ export type Procedure = {
   category: Category;
   categoryHref: string;
   summary: string;
+  highlights: string[];
   description: string[];
 };
 
 export const procedures: Procedure[] = [
   {
     slug: 'lipo-360',
-    name: 'Lipo 360',
+    name: 'Male Lipo 360',
     category: 'Cosmetic Surgery',
     categoryHref: '/cosmetic-surgery',
-    summary: 'Body contouring that sculpts the abdomen, waist, flanks, and back.',
+    summary: 'Circumferential torso sculpting targeting the abdomen, chest border, flanks, and lower back for a leaner athletic frame.',
+    highlights: ['Abdomen, love handles & lower back', 'Tailored to masculine V-taper proportions', 'Body contouring — not weight loss'],
     description: [
-      'Liposuction 360 sculpts and contours the body via fat removal from the abdomen, waist, flanks, and full back, working with your natural curves to create a balanced result.',
-      'Ideal candidates have no health conditions that would impair healing, meet BMI requirements, and hold realistic expectations. Lipo 360 targets stubborn fat deposits for immediate visible results — it is a body-contouring treatment, not a weight-loss procedure.',
-    ],
-  },
-  {
-    slug: 'bbl',
-    name: 'BBL',
-    category: 'Cosmetic Surgery',
-    categoryHref: '/cosmetic-surgery',
-    summary: 'A personalized approach to body contouring and proportions.',
-    description: [
-      'A BBL, or Brazilian Butt Lift, is a fat transfer to the buttocks performed after liposuction to improve shape, projection, and a rounder appearance.',
-      'The procedure combines fat transfer with body sculpting to create a proportionate silhouette. It is particularly suited for individuals seeking a more natural-looking, fuller appearance in the buttocks area.',
-      'Recovery: incisions typically take two to three weeks to heal, though it takes approximately six months to see final results as the transferred fat settles and swelling resolves. Proper aftercare is important to the outcome.',
-    ],
-  },
-  {
-    slug: 'j-plasma',
-    name: 'J-Plasma',
-    category: 'Cosmetic Surgery',
-    categoryHref: '/cosmetic-surgery',
-    summary: 'Energy-based skin tightening used alongside liposuction.',
-    description: [
-      'J-Plasma, also known as Renuvion, is a skin-tightening device used alongside liposuction to lift, tighten, and rejuvenate skin. It works by introducing helium gas and radiofrequency energy beneath the skin through small entry points, causing controlled heating and cooling that promotes skin contraction.',
-      'As an add-on to liposuction, it offers skin tightening with minimal scarring and no additional downtime, and can be applied to the arms, abdomen, flanks, back, thighs, knees, chin, and neck. A consultation determines whether you’re a suitable candidate.',
+      'Male Lipo 360 sculpts and defines the upper and mid-torso through targeted fat removal across the abdomen, obliques, flanks (love handles), and lower back — engineered around straighter, athletic masculine lines rather than curved proportions.',
+      'Ideal candidates are men in good overall health who meet BMI guidelines and want to eliminate stubborn fat pockets that resist training and nutrition. Lipo 360 delivers immediate structural definition as swelling subsides and is planned as precision body contouring rather than a substitute for weight loss.',
     ],
   },
   {
     slug: 'chin-liposuction',
-    name: 'Chin Liposuction',
+    name: 'Chin & Jawline Liposuction',
     category: 'Cosmetic Surgery',
     categoryHref: '/cosmetic-surgery',
-    summary: 'Refining the appearance of the chin and neck area.',
+    summary: 'Submental fat removal under local sedation to eliminate a double chin and uncover a sharper mandibular angle.',
+    highlights: ['Completed in under an hour', 'Local sedation with rapid recovery', 'Sharpens neck & jawline profile'],
     description: [
-      'Chin liposuction removes fat from the neck and jawline to create a sharper jawline, reduce the appearance of a double chin, and give the face a slimmer profile.',
-      'A double chin is generally attributed to weight gain and genetic factors. The procedure requires minimal recovery time and can typically be completed in under an hour using local sedation.',
+      'Chin and jawline liposuction removes submental fat beneath the chin and along the upper neck to create a cleaner cervicomental angle, reduce fullness, and bring out a stronger, more angular lower face.',
+      'Submental fullness in men is frequently driven by genetics as much as body composition, persisting even at lean body weights. The procedure is typically completed in under an hour using local sedation with minimal downtime.',
     ],
   },
   {
-    slug: 'cellulite-treatment',
-    name: 'Cellulite Treatment',
+    slug: 'j-plasma',
+    name: 'J-Plasma® Skin Tightening',
     category: 'Cosmetic Surgery',
     categoryHref: '/cosmetic-surgery',
-    summary: 'Treatment planning based on individual anatomy and goals.',
+    summary: 'Renuvion helium-plasma and radiofrequency skin contraction paired with male liposuction for firmer torso and neck contours.',
+    highlights: ['Helium plasma + RF energy', 'Minimal entry points, no extra downtime', 'Chest, abdomen, flanks, chin & neck'],
     description: [
-      'Cellulite is the appearance of dimpled flesh that can appear on the buttocks, thighs, and hips. Treatment uses a fat-disrupter device to break down fatty tissue bands and improve circulation.',
-      'Patients can expect to see full results within 3–4 weeks, with a minimum of three sessions typically recommended depending on the severity of cellulite.',
-    ],
-  },
-  {
-    slug: 'kybella',
-    name: 'Kybella',
-    category: 'Aesthetics',
-    categoryHref: '/aesthetics',
-    summary: 'A treatment option for submental fullness in appropriate candidates.',
-    description: [
-      'KYBELLA® is an injectable medicine used in adults to improve the appearance and profile of moderate to severe fat below the chin (submental fat), also called a “double chin.”',
-      'It uses synthetic deoxycholic acid — a substance naturally found in the body that helps break down dietary fat. Injected under the chin, it destroys fat cells, leading to a noticeable reduction in fullness over a treatment plan tailored to your chin profile.',
-    ],
-  },
-  {
-    slug: 'non-surgical-bbl',
-    name: 'Non-Surgical BBL',
-    category: 'Aesthetics',
-    categoryHref: '/aesthetics',
-    summary: 'Non-surgical body contouring options selected after consultation.',
-    description: [
-      'A non-surgical BBL is achieved by placing fillers to increase buttock volume, soften hip dips, and reduce the appearance of cellulite, while stimulating collagen production.',
-      'Results appear immediately and continue to improve over 6–8 weeks. The treatment is noninvasive, FDA-approved, safe across body types, requires no recovery time, takes about an hour, and results can last up to three years.',
-      'This approach offers subtle enhancement rather than the more dramatic transformation possible with a surgical fat-transfer BBL.',
-    ],
-  },
-  {
-    slug: 'injectable-treatments',
-    name: 'Injectables',
-    category: 'Aesthetics',
-    categoryHref: '/aesthetics',
-    summary: 'Personalized aesthetic treatments designed around facial balance.',
-    description: [
-      'Dermal fillers and neurotoxins are a non-surgical, non-invasive option to augment facial features. Dermal fillers restore lost volume with immediate results.',
-      'Neurotoxins such as Botox address fine lines, wrinkles, and teeth grinding, and can reshape the brow or improve a gummy smile, with full results appearing within two weeks. Both treatments are minimally invasive with little downtime.',
-    ],
-  },
-  {
-    slug: 'endolift',
-    name: 'Endolift®',
-    category: 'Aesthetics',
-    categoryHref: '/aesthetics',
-    summary: 'Minimally invasive laser-assisted skin tightening and contouring.',
-    description: [
-      'Endolift® is a minimally invasive, laser-assisted treatment that improves skin laxity and facial or body contouring through targeted energy delivered beneath the skin.',
-      'It tightens and defines areas like the lower face, jawline, neck, and body through collagen remodeling, typically with less recovery time than surgical lifting. It suits mild-to-moderate laxity or contour concerns, but cannot replace a full facelift for significant skin excess or advanced laxity. A consultation determines candidacy.',
-    ],
-  },
-  {
-    slug: 'weight-loss-and-wellness',
-    name: 'Weight Loss & Wellness',
-    category: 'Wellness',
-    categoryHref: '/wellness',
-    summary: 'Medically guided weight loss support, including Semaglutide and Phentermine.',
-    description: [
-      'For patients whose diet and exercise efforts haven’t delivered results, the practice offers weight loss solutions including Semaglutide and Phentermine.',
-      'Semaglutide is an injectable medication indicated for weight loss that helps regulate glucose levels and suppress appetite by activating GLP-1 receptors, delivered via weekly injections. Results typically appear within the first few weeks, with optimal outcomes when combined with diet and exercise.',
-      'This service can suit patients looking to reduce BMI ahead of surgery, or to jumpstart a weight-loss journey when conventional methods haven’t been enough.',
-    ],
-  },
-  {
-    slug: 'iv-hydration',
-    name: 'IV Hydration',
-    category: 'Wellness',
-    categoryHref: '/wellness',
-    summary: 'Customized IV nutrient therapy for hydration and energy.',
-    description: [
-      'IV hydration therapy delivers a mix of essential vitamins and minerals that rehydrates the body and increases energy levels.',
-      'Customized nutrient combinations can be selected to support immunity, detoxification for skin and hair health, or post-event recovery.',
-    ],
-  },
-  {
-    slug: 'stem-cell-and-regenerative-treatments',
-    name: 'Regenerative Treatments',
-    category: 'Wellness',
-    categoryHref: '/wellness',
-    summary: 'Stem cell and regenerative treatments that support skin quality and resilience.',
-    description: [
-      'Stem cell and regenerative treatments are an evolving area of aesthetic and wellness medicine, focused on the use of biologic materials and regenerative signaling factors to support tissue repair, skin quality, and overall rejuvenation.',
-      'These therapies may be used on their own or combined with other aesthetic procedures to address skin texture, tone, and age-related concerns.',
-      'Results vary considerably, and cannot guarantee particular cosmetic outcomes — the specific materials, sources, processing methods, and regulatory status are thoroughly discussed during consultation.',
+      'J-Plasma (Renuvion) is an energy-based subdermal skin-tightening technology frequently paired with male liposuction so skin contracts cleanly over newly sculpted contours. Cold helium plasma and radiofrequency energy are delivered through tiny entry points to trigger immediate tissue contraction and ongoing collagen remodeling.',
+      'Used across the chest border, abdomen, flanks, back, chin, and neck, J-Plasma adds definition with minimal scarring and without extending liposuction recovery time. Candidacy is evaluated during consultation based on skin elasticity and anatomy.',
     ],
   },
   {
@@ -151,11 +52,86 @@ export const procedures: Procedure[] = [
     name: 'FUE Hair Transplant',
     category: 'Hair Restoration',
     categoryHref: '/hair-restoration',
-    summary: 'FUE hair transplantation combined with PRP therapy, with no linear donor scar.',
+    summary: 'Individual follicular unit extraction paired with PRP therapy — natural hairline density with zero linear strip scar.',
+    highlights: ['Short-fade & buzz-cut friendly', 'No linear donor scar', 'Combined with PRP therapy'],
     description: [
-      'Follicular Unit Extraction (FUE) is a minimally invasive hair-transplant technique that restores thinning or lost hair by relocating individual hair follicles from a donor area to areas experiencing hair loss.',
-      'The procedure uses your own hair follicles with precise placement for natural-looking results and avoids the linear scarring associated with strip-harvesting methods, so hair can be worn short. It can restore the hairline, crown, and thinning areas, and is generally less invasive to recover from than strip harvesting.',
-      'Treatments may be combined with Platelet-Rich Plasma (PRP) therapy to support healing and enhance results. Candidacy depends on hair-loss pattern, donor-hair availability, scalp condition, and overall health, and is assessed individually during consultation.',
+      'Follicular Unit Extraction (FUE) restores receding temples, frontal hairlines, and thinning crowns by harvesting individual follicles from permanent donor zones and placing them at natural masculine growth angles.',
+      'Because FUE avoids strip-harvesting incisions, there is no linear scar across the back of the head — allowing men to continue wearing clean fades or cropped styles with confidence.',
+      'Procedures may be paired with Platelet-Rich Plasma (PRP) therapy to support graft survival, scalp healing, and native hair caliber. Hair-loss pattern, donor density, and long-term hairline design are mapped one-on-one with Dr. Ladipo during consultation.',
+    ],
+  },
+  {
+    slug: 'injectable-treatments',
+    name: "Men's Injectables",
+    category: 'Aesthetics',
+    categoryHref: '/aesthetics',
+    summary: 'Masculine jawline and chin filler alongside tailored neurotoxins for forehead lines, brow heaviness, and jaw clenching.',
+    highlights: ['Angular chin & jawline structure', 'Natural movement — never frozen', 'Masseter clenching & line relief'],
+    description: [
+      'Injectable treatments for men require distinct dosing and anatomical placement to preserve strong, natural facial character. Structural dermal fillers reinforce chin projection and mandibular definition with immediate results and minimal downtime.',
+      'Neurotoxins such as Botox® soften deep forehead creases, glabellar frown lines, and crow’s feet while maintaining natural expression, and can also relieve masseter tension from teeth grinding. Full neurotoxin results settle within two weeks.',
+    ],
+  },
+  {
+    slug: 'kybella',
+    name: 'Kybella® Jawline Contouring',
+    category: 'Aesthetics',
+    categoryHref: '/aesthetics',
+    summary: 'Non-surgical injectable deoxycholic acid that permanently destroys submental fat cells beneath the chin.',
+    highlights: ['Non-surgical office sessions', 'Targets double-chin fullness', 'Permanent fat-cell destruction'],
+    description: [
+      'KYBELLA® is an FDA-approved injectable treatment indicated for adults with moderate-to-severe submental fat beneath the chin who prefer a non-surgical alternative to chin liposuction.',
+      'Using synthetic deoxycholic acid — a molecule naturally produced by the body to break down dietary fat — targeted injections destroy fat cells under the chin over a customized series of sessions, progressively sharpening the profile.',
+    ],
+  },
+  {
+    slug: 'endolift',
+    name: 'Endolift® Laser Tightening',
+    category: 'Aesthetics',
+    categoryHref: '/aesthetics',
+    summary: 'Minimally invasive subdermal laser remodeling to tighten lower-face, jawline, neck, and torso laxity.',
+    highlights: ['Subdermal micro-optical fiber', 'Sharpens lower face & neck', 'Minimal recovery window'],
+    description: [
+      'Endolift® delivers targeted laser energy beneath the skin via hair-thin micro-optical fibers to stimulate deep collagen contraction and selective fat remodeling without surgical incisions.',
+      'For men noticing early jowling, softening along the jawline and neck, or mild skin laxity on the abdomen, Endolift® offers measurable tightening with far less downtime than surgical lifting. Consultation determines whether laser remodeling or surgical contouring best fits your anatomy.',
+    ],
+  },
+  {
+    slug: 'weight-loss-and-wellness',
+    name: 'Medical Weight Loss',
+    category: 'Wellness',
+    categoryHref: '/wellness',
+    summary: 'Physician-guided GLP-1 (Semaglutide) and Phentermine programs for visceral fat loss and metabolic performance.',
+    highlights: ['Weekly Semaglutide protocols', 'Phentermine metabolic options', 'Pre-surgery BMI optimization'],
+    description: [
+      'When structured training and nutrition hit a plateau, physician-directed medical weight loss provides targeted metabolic support using clinically proven medications including Semaglutide and Phentermine.',
+      'Semaglutide activates GLP-1 receptors via once-weekly injections to regulate glucose response, quiet persistent appetite signals, and reduce visceral body fat steadily alongside strength training and protein-focused nutrition.',
+      'Men utilize the program both for standalone body-composition goals and to reach optimal target BMI ahead of Lipo 360 or torso contouring.',
+    ],
+  },
+  {
+    slug: 'iv-hydration',
+    name: 'IV Performance Hydration',
+    category: 'Wellness',
+    categoryHref: '/wellness',
+    summary: 'Direct micronutrient, mineral, and hydration infusions engineered for stamina, recovery, and cellular resilience.',
+    highlights: ['100% intravenous bioavailability', 'Athletic & travel recovery', 'Supports immunity, skin & hair'],
+    description: [
+      'IV hydration therapy bypasses digestive absorption limits to deliver fluids, electrolytes, essential vitamins, and minerals directly into circulation for rapid cellular replenishment.',
+      'Formulations are tailored around demanding schedules — supporting intense training recovery, immune defense, travel fatigue, or foundational scalp and skin nutrition.',
+    ],
+  },
+  {
+    slug: 'stem-cell-and-regenerative-treatments',
+    name: 'Regenerative Treatments',
+    category: 'Wellness',
+    categoryHref: '/wellness',
+    summary: 'Biologic signaling factors and regenerative protocols supporting tissue repair, recovery, and skin quality.',
+    highlights: ['Biologic signaling factors', 'Standalone or paired with procedures', 'Individualized clinical review'],
+    description: [
+      'Regenerative medicine focuses on biologic materials and cellular signaling factors that support tissue repair, structural skin quality, and post-procedure recovery.',
+      'For male patients, regenerative therapies may be integrated alongside hair restoration, laser tightening, or aesthetic care to address texture, tone, and age-related tissue changes.',
+      'Outcomes vary by individual biology and cannot guarantee specific cosmetic results — exact biologic sources, processing standards, and regulatory status are reviewed transparently during consultation.',
     ],
   },
 ];

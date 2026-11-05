@@ -1,20 +1,38 @@
 import type { Metadata } from 'next';
-import SectionHeading from '@/components/section-heading';
 import CtaBanner from '@/components/cta-banner';
+import SectionHeading from '@/components/section-heading';
 
 export const metadata: Metadata = {
   title: 'FAQs',
-  description: 'Frequently asked questions about procedures at Atlantic Cosmetic Surgery & MedSpa.',
+  description: "Frequently asked questions about male procedures at Atlantic Men's Surgery & MedSpa.",
 };
 
-const faqs: { question: string; answer: string | null }[] = [
+const faqs: { question: string; answer: string }[] = [
   {
-    question: 'How long does it take to fully recover from a BBL?',
+    question: 'Will an FUE hair transplant leave a visible linear scar if I wear a short fade?',
     answer:
-      'Your incisions will take two to three weeks to heal, but it will be approximately six months before you see the final results, as the transferred fat settles and swelling resolves. Proper aftercare is important to the outcome.',
+      'No. Follicular Unit Extraction (FUE) harvests individual hair follicles rather than removing a strip of scalp, avoiding the horizontal linear scar associated with strip methods so hair can still be worn cropped or faded once healed.',
   },
-  { question: 'What should you not do before a BBL?', answer: null },
-  { question: 'What happens to a BBL after several years?', answer: null },
+  {
+    question: 'Is Male Lipo 360 a weight-loss procedure?',
+    answer:
+      'No. Male Lipo 360 is a precision body-contouring procedure designed to remove stubborn fat deposits across the abdomen, obliques, flanks, and lower back for a leaner V-taper frame. Men looking to reduce BMI before surgery can begin with our physician-guided Semaglutide or Phentermine weight-loss program.',
+  },
+  {
+    question: 'How do I choose between Chin Liposuction and Kybella® for jawline definition?',
+    answer:
+      'Chin liposuction physically removes submental fat in a single procedure typically completed in under an hour under local sedation. Kybella® is a non-surgical injectable option using synthetic deoxycholic acid across a tailored series of office sessions. Dr. Ladipo evaluates skin elasticity and submental volume during consultation to recommend the right fit.',
+  },
+  {
+    question: 'Will neurotoxins or jawline fillers look unnatural on a male face?',
+    answer:
+      'Male injectable planning uses conservative dosing and angular placement tailored to masculine bone structure — softening deep forehead lines or masseter jaw tension without freezing expression, and reinforcing chin or mandibular definition rather than adding rounded volume.',
+  },
+  {
+    question: 'Does adding J-Plasma® (Renuvion) increase liposuction downtime?',
+    answer:
+      'J-Plasma® uses existing tiny liposuction entry points to deliver cold helium plasma and radiofrequency energy beneath the skin, promoting tissue contraction across the chest border, abdomen, flanks, or neck without adding extra recovery time.',
+  },
 ];
 
 export default function FaqsPage() {
@@ -22,14 +40,19 @@ export default function FaqsPage() {
     <>
       <section className="section">
         <div className="container max-w-3xl">
-          <SectionHeading as="h1" eyebrow="FAQs" title="Frequently asked questions." />
+          <SectionHeading
+            as="h1"
+            index="01 / Frequently Asked Questions"
+            title="Clear answers before your consultation."
+            text="Every patient’s anatomy and medical history are distinct; specific surgical and non-surgical recommendations are finalized one-on-one."
+          />
           <div className="mt-12 grid gap-4">
-            {faqs.map(({ question, answer }) => (
-              <details key={question} className="card" open={Boolean(answer)}>
-                <summary className="cursor-pointer text-lg font-medium marker:content-none">{question}</summary>
-                <p className="mt-4 leading-7 text-muted">
-                  {answer ?? 'This is best answered for your specific situation — ask us during a consultation.'}
-                </p>
+            {faqs.map(({ question, answer }, idx) => (
+              <details key={question} className="card group" open={idx === 0}>
+                <summary className="cursor-pointer list-none font-serif text-xl leading-snug text-ink marker:content-none">
+                  {question}
+                </summary>
+                <p className="mt-4 border-t border-line pt-4 text-sm leading-7 text-muted sm:text-base">{answer}</p>
               </details>
             ))}
           </div>

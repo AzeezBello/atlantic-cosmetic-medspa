@@ -1,10 +1,10 @@
 import type { Metadata } from 'next';
-import SectionHeading from '@/components/section-heading';
 import CtaBanner from '@/components/cta-banner';
+import SectionHeading from '@/components/section-heading';
 
 export const metadata: Metadata = {
   title: 'Payment Plans',
-  description: 'Flexible payment options at Atlantic Cosmetic Surgery & MedSpa.',
+  description: "Flexible financing and payment options for male procedures at Atlantic Men's Surgery & MedSpa.",
 };
 
 export default function PaymentPlansPage() {
@@ -12,11 +12,15 @@ export default function PaymentPlansPage() {
     <>
       <section className="section">
         <div className="container max-w-2xl">
-          <SectionHeading as="h1" eyebrow="Payment Plans" title="Flexible options for your care." />
+          <SectionHeading
+            as="h1"
+            index="01 / Payment Plans"
+            title="Straightforward financing options for your treatment plan."
+          />
           <p className="mt-6 text-lg leading-8 text-muted">
-            We understand that investing in your care is a personal decision, and we want cost to be one less
-            thing to worry about. Contact our office to review the payment and financing options available for
-            your treatment plan.
+            Investing in surgical contouring, FUE hair restoration, or ongoing metabolic care is a personal decision.
+            Contact our Roswell office to review structured payment and patient-financing options tailored to your
+            procedure plan.
           </p>
         </div>
       </section>

@@ -1,45 +1,51 @@
 'use client';
 
-import { useEffect, useRef, type ReactNode } from 'react';
+import { useGSAP } from '@gsap/react';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { type ReactNode, useRef } from 'react';
 
-/**
- * Fades and lifts its children into view the first time they scroll into the viewport.
- * The hidden starting state only applies when the visitor allows motion (see globals.css),
- * so content is always readable with reduced motion or without JavaScript.
- */
-export default function Reveal({
-  children,
-  className = '',
-  delay = 0,
-}: {
+gsap.registerPlugin(ScrollTrigger);
+
+type Props = {
   children: ReactNode;
   className?: string;
   delay?: number;
-}) {
+};
+
+export default function Reveal({ children, className = '', delay = 0 }: Props) {
   const ref = useRef<HTMLDivElement>(null);
 
-  useEffect(() => {
-    const el = ref.current;
-    if (!el) return;
-    if (typeof IntersectionObserver === 'undefined') {
-      el.classList.add('is-visible');
-      return;
-    }
-    const observer = new IntersectionObserver(
-      (entries) => {
-        if (entries.some((entry) => entry.isIntersecting)) {
-          el.classList.add('is-visible');
-          observer.disconnect();
-        }
-      },
-      { rootMargin: '0px 0px -8% 0px', threshold: 0.12 },
-    );
-    observer.observe(el);
-    return () => observer.disconnect();
-  }, []);
+  useGSAP(
+    () => {
+      const element = ref.current;
+      if (!element) return;
+
+      const mm = gsap.matchMedia();
+      mm.add('(prefers-reduced-motion: no-preference)', () => {
+        gsap.fromTo(
+          element,
+          { autoAlpha: 0, y: 24 },
+          {
+            autoAlpha: 1,
+            y: 0,
+            duration: 0.78,
+            delay: delay / 1000,
+            ease: 'power3.out',
+            scrollTrigger: {
+              trigger: element,
+              start: 'top 88%',
+              toggleActions: 'play none none none',
+            },
+          },
+        );
+      });
+    },
+    { scope: ref },
+  );
 
   return (
-    <div ref={ref} data-reveal className={className} style={delay ? { transitionDelay: `${delay}ms` } : undefined}>
+    <div ref={ref} data-reveal="" className={className}>
       {children}
     </div>
   );

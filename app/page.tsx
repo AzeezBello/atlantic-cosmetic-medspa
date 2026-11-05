@@ -1,82 +1,116 @@
 import { ArrowRight } from 'lucide-react';
 import Link from 'next/link';
-import Hero from '@/components/hero';
-import Reveal from '@/components/reveal';
-import SectionHeading from '@/components/section-heading';
 import CtaBanner from '@/components/cta-banner';
+import Hero from '@/components/hero';
 import ResultFigure from '@/components/result-figure';
+import Reveal from '@/components/reveal';
+import ScrollJourney from '@/components/scroll-journey';
+import SectionHeading from '@/components/section-heading';
+import SpotlightCard from '@/components/spotlight-card';
+import { procedures } from '@/lib/procedures';
 import { featuredResults } from '@/lib/results';
 
-const services: [string, string, string][] = [
-  ['Cosmetic Surgery', '/cosmetic-surgery', 'Lipo 360, BBL, J-Plasma, and other body and facial procedures.'],
-  ['Aesthetics', '/aesthetics', 'Injectables, Kybella, non-surgical BBL, and Endolift® skin tightening.'],
-  ['Hair Restoration', '/hair-restoration', 'FUE hair transplantation combined with PRP therapy.'],
-  ['Wellness', '/wellness', 'Weight loss & wellness, IV hydration, and regenerative treatments.'],
-];
-
 const pillars: [string, string][] = [
-  ['Privacy by design', 'A discreet entrance and a warm, welcoming atmosphere protect your comfort from the moment you arrive.'],
-  ['A modern facility', 'Patient rooms and operating areas equipped with the latest technology and medical equipment.'],
-  ['Surgical and non-surgical, under one roof', 'Cosmetic surgery, aesthetics, hair restoration, and wellness care in a single Roswell location.'],
-  ['Care from consultation to recovery', 'Safety and comfort prioritized at every stage — before, during, and after your procedure.'],
+  [
+    'Discreet entrance by design',
+    'A private clinic arrival and calm architectural setting protect your confidentiality from consultation through follow-up.',
+  ],
+  [
+    'Engineered for male proportions',
+    'Surgical torso sculpting, jawline definition, and neurotoxin dosing planned specifically around masculine structure — never feminized or overdone.',
+  ],
+  [
+    'Short-fade friendly FUE',
+    'Individual follicular extraction with PRP avoids strip-harvesting incisions, leaving no linear scar across the back of the head.',
+  ],
+  [
+    'Surgical & metabolic under one roof',
+    'Combine GLP-1 weight management, IV recovery hydration, hair restoration, and body contouring inside one Roswell facility.',
+  ],
 ];
 
 const facts: [string, string][] = [
-  ['2016', 'Established'],
-  ['4', 'Areas of care'],
-  ['Roswell', 'Georgia'],
+  ['2016', 'Practice Established'],
+  ['4', 'Male Care Disciplines'],
+  ['Roswell', 'Georgia Facility'],
 ];
+
+const featuredSlugs = [
+  'lipo-360',
+  'fue-hair-transplant',
+  'chin-liposuction',
+  'injectable-treatments',
+  'j-plasma',
+  'weight-loss-and-wellness',
+];
+
+const signatureProcedures = featuredSlugs
+  .map((slug) => procedures.find((item) => item.slug === slug))
+  .filter((item): item is (typeof procedures)[number] => Boolean(item));
 
 export default function Home() {
   return (
     <>
       <Hero />
 
-      <section id="approach" className="section scroll-mt-20">
-        <div className="container grid gap-12 lg:grid-cols-[.95fr_1.05fr] lg:gap-20">
+      <section className="section">
+        <div className="container grid gap-12 lg:grid-cols-[minmax(0,0.95fr)_minmax(0,1.05fr)] lg:gap-20">
           <Reveal>
             <SectionHeading
-              eyebrow="The Atlantic Approach"
-              title="Personalized care. Modern techniques. Thoughtful results."
+              index="01 / The Male Standard"
+              title="Anatomical precision. Natural lines. Zero guesswork."
             />
           </Reveal>
-          <Reveal delay={120}>
+          <Reveal delay={100}>
             <p className="text-lg leading-8 text-muted">
-              Every treatment begins with understanding what you want to change and why. Our approach combines
-              aesthetic planning with individualized consultation so your care can be tailored to your anatomy,
-              preferences, and goals.
+              Men approach aesthetic and surgical care with distinct priorities: sharper jawlines, athletic torso
+              proportions, dense natural hairlines, and minimal visible downtime. Led by Olanrewaju Ladipo, MD —
+              trained in reconstructive microsurgery, plastic surgery, and hair restoration — every treatment plan is
+              tailored directly to male anatomy and long-term maintenance.
             </p>
             <div className="mt-10 grid grid-cols-3 gap-6 border-t border-line pt-8">
               {facts.map(([value, label]) => (
                 <div key={label}>
                   <p className="font-serif text-3xl leading-none sm:text-4xl">{value}</p>
-                  <p className="mt-2 text-[10px] uppercase tracking-[.14em] text-muted sm:text-xs">{label}</p>
+                  <p className="mt-2 text-xs text-muted">{label}</p>
                 </div>
               ))}
             </div>
-            <Link href="/about" className="link-arrow mt-8 inline-flex items-center gap-2 text-xs uppercase tracking-[.12em]">
-              About Atlantic <ArrowRight size={15} />
+            <Link href="/about" className="link-arrow mt-8 inline-flex items-center gap-2 text-sm font-semibold text-blue">
+              Meet Dr. Ladipo &amp; the Practice <ArrowRight aria-hidden="true" size={15} />
             </Link>
           </Reveal>
         </div>
       </section>
 
+      <ScrollJourney />
+
       <section className="section bg-tint">
         <div className="container">
           <Reveal>
-            <div className="max-w-2xl">
-              <div className="eyebrow">Why Atlantic</div>
-              <h2 className="text-4xl leading-tight md:text-5xl">Built around your comfort and peace of mind.</h2>
-            </div>
+            <SectionHeading
+              index="03 / Signature Male Procedures"
+              title="Targeted treatments with clear clinical purpose."
+              text="Candidacy, technique, recovery windows, and expected outcomes are reviewed one-on-one during consultation."
+            />
           </Reveal>
-          <div className="mt-14 grid gap-10 md:grid-cols-2 lg:grid-cols-4 lg:gap-8">
-            {pillars.map(([title, text], index) => (
-              <Reveal key={title} delay={index * 90}>
-                <article className="border-t border-line pt-6">
-                  <span className="text-xs tracking-[.14em] text-blue">0{index + 1}</span>
-                  <h3 className="mt-4 text-2xl leading-snug">{title}</h3>
-                  <p className="mt-3 leading-6 text-muted">{text}</p>
-                </article>
+          <div className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+            {signatureProcedures.map((procedure, idx) => (
+              <Reveal key={procedure.slug} delay={idx * 70} className="flex">
+                <SpotlightCard className="group flex w-full flex-col">
+                  <div className="flex items-center justify-between text-xs text-muted">
+                    <span className="font-mono text-blue">0{idx + 1}</span>
+                    <span>{procedure.category}</span>
+                  </div>
+                  <h3 className="mt-4 text-2xl">{procedure.name}</h3>
+                  <p className="mt-3 flex-1 text-sm leading-6 text-muted">{procedure.summary}</p>
+                  <Link
+                    href={`/procedures/${procedure.slug}`}
+                    className="link-arrow mt-7 inline-flex items-center gap-2 text-xs font-semibold text-ink transition-colors group-hover:text-blue"
+                  >
+                    Explore {procedure.name} <ArrowRight aria-hidden="true" size={14} />
+                  </Link>
+                </SpotlightCard>
               </Reveal>
             ))}
           </div>
@@ -87,41 +121,44 @@ export default function Home() {
         <div className="container">
           <Reveal>
             <SectionHeading
-              eyebrow="Our Services"
-              title="Care across surgery, aesthetics, and wellness."
-              text="Candidacy, technique, risks, recovery, and expected outcomes are discussed during consultation."
+              index="04 / Why Men Choose Atlantic"
+              title="Built around privacy, recovery, and lasting structure."
             />
           </Reveal>
-          <div className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
-            {services.map(([name, href, desc], index) => (
-              <Reveal key={href} delay={index * 90} className="flex">
-                <Link className="card group flex w-full flex-col" href={href}>
-                  <span className="text-xs tracking-[.14em] text-muted">0{index + 1}</span>
-                  <h3 className="mt-5 text-2xl">{name}</h3>
-                  <p className="mt-3 flex-1 leading-6 text-muted">{desc}</p>
-                  <span className="link-arrow mt-7 inline-flex items-center gap-2 text-xs uppercase tracking-[.12em]">
-                    Learn more <ArrowRight size={15} />
-                  </span>
-                </Link>
+          <div className="mt-14 grid gap-10 md:grid-cols-2 lg:grid-cols-4 lg:gap-8">
+            {pillars.map(([title, text], index) => (
+              <Reveal key={title} delay={index * 80}>
+                <article className="border-t border-line pt-6">
+                  <span className="font-mono text-xs text-blue">0{index + 1}</span>
+                  <h3 className="mt-4 text-2xl leading-snug">{title}</h3>
+                  <p className="mt-3 text-sm leading-6 text-muted">{text}</p>
+                </article>
               </Reveal>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="section">
+      <section className="section bg-tint">
         <div className="container">
           <Reveal>
             <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
-              <SectionHeading eyebrow="Results" title="Real patients. Real outcomes." text="Individual results vary." />
-              <Link href="/results" className="link-arrow inline-flex items-center gap-2 text-xs uppercase tracking-[.12em]">
-                View all results <ArrowRight size={15} />
+              <SectionHeading
+                index="05 / Male Clinical Results"
+                title="Real male patients. Verified outcomes."
+                text="Unretouched clinical photographs across Male Lipo 360 and FUE hair transplantation. Individual results vary."
+              />
+              <Link
+                href="/results"
+                className="link-arrow inline-flex items-center gap-2 text-sm font-semibold text-blue"
+              >
+                View all male results <ArrowRight aria-hidden="true" size={15} />
               </Link>
             </div>
           </Reveal>
           <div className="mt-12 grid items-start gap-5 md:grid-cols-3">
             {featuredResults.map((result, index) => (
-              <Reveal key={result.src} delay={index * 110}>
+              <Reveal key={result.src} delay={index * 95}>
                 <ResultFigure {...result} />
               </Reveal>
             ))}

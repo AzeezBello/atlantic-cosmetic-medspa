@@ -1,22 +1,20 @@
-# Atlantic Cosmetic Surgery & MedSpa
+# Atlantic Men's Surgery & MedSpa
 
-Independent Next.js website starter for Atlantic Cosmetic Surgery & MedSpa.
+Next.js website for Atlantic Men's Surgery & MedSpa in Roswell, Georgia — focused exclusively on male cosmetic surgery, FUE hair restoration, masculine facial aesthetics, and physician-guided metabolic wellness.
 
-## Stack
-- Next.js 16
-- React 19
-- TypeScript
-- Tailwind CSS v4
-- Lucide React
-- Vercel-ready
+## Stack & Design System
+- Next.js 16 (App Router) + React 19 + TypeScript
+- Tailwind CSS v4 tokenized via [`DESIGN.md`](./DESIGN.md) (`google-labs-code/design.md` specification)
+- GSAP + `@gsap/react` (`useGSAP` + `ScrollTrigger`) scroll-scrubbed stage architecture
+- WebGL topographic shader backdrop (`components/canvas-atmosphere.tsx`) & spotlight micro-interactions (`components/spotlight-card.tsx`)
+- Lucide React icons
 
 ## Run locally
+```sh
 npm install
 npm run dev
+```
 
 ## Before production
-- Replace image placeholders with approved/owned media.
-- Publish before/after images and testimonials only with appropriate approval/consent.
+- Publish patient before/after images only with verified clinical consent.
 - Verify medical copy, claims, credentials, contact details, privacy language, and regulatory requirements.
-- Connect the consultation form to an approved CRM/email/form provider.
-# atlantic-cosmetic-medspa

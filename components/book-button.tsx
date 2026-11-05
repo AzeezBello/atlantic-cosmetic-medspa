@@ -14,8 +14,8 @@ export default function BookButton({
 }) {
   return (
     <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer" className={className}>
-      {label}
-      <ArrowUpRight aria-hidden="true" size={15} className="ml-2 shrink-0" />
+      <span>{label}</span>
+      <ArrowUpRight aria-hidden="true" size={15} className="shrink-0" />
     </a>
   );
 }

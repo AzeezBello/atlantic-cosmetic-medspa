@@ -24,7 +24,7 @@ export default function ResultFigure({ src, alt, label, detail, width, height, p
         <Link
           href={`/procedures/${procedure}`}
           aria-label={`View ${label} procedure details`}
-          className="inline-flex min-h-9 min-w-9 shrink-0 items-center justify-center rounded-md border border-line text-muted transition-colors hover:border-blue hover:text-blue"
+          className="inline-flex min-h-11 min-w-11 shrink-0 items-center justify-center rounded-md border border-line text-muted transition-colors hover:border-blue hover:text-blue"
         >
           <ArrowRight aria-hidden="true" size={15} />
         </Link>

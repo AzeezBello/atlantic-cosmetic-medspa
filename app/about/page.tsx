@@ -14,14 +14,14 @@ export default function AboutPage() {
   return (
     <>
       <section className="section">
-        <div className="container grid gap-14 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)] lg:items-center">
+        <div className="container grid gap-10 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)] lg:items-center lg:gap-14">
           <div>
             <SectionHeading
               as="h1"
               index="01 / About Atlantic"
               title="Dedicated surgical and medical care built around men."
             />
-            <div className="mt-8 grid gap-6 text-lg leading-8 text-muted">
+            <div className="mt-6 grid gap-5 text-base leading-7 text-muted sm:mt-8 sm:gap-6 sm:text-lg sm:leading-8">
               <p>
                 Established in Smyrna, Georgia in 2016 and now operating out of a modern private facility in Roswell,
                 Atlantic Men&rsquo;s Surgery &amp; MedSpa brings surgical contouring, FUE hair restoration, masculine
@@ -33,11 +33,11 @@ export default function AboutPage() {
                 individualized anatomical planning, and attentive follow-through from consultation to recovery.
               </p>
             </div>
-            <Link href="/our-clinic" className="btn btn-outline mt-8">
+            <Link href="/our-clinic" className="btn btn-outline mt-7 w-full sm:mt-8 sm:w-auto">
               Tour Our Roswell Facility
             </Link>
           </div>
-          <div className="relative aspect-[3/4] overflow-hidden rounded-2xl border border-line bg-tint">
+          <div className="relative aspect-[4/5] overflow-hidden rounded-2xl border border-line bg-tint sm:aspect-[3/4]">
             <Image
               src="/images/clinic-team.png"
               alt="Dr. Olanrewaju Ladipo and the Atlantic clinical team in the Roswell facility"
@@ -51,9 +51,9 @@ export default function AboutPage() {
       </section>
 
       <section className="section bg-tint">
-        <div className="container grid gap-14 lg:grid-cols-[minmax(0,0.8fr)_minmax(0,1.2fr)] lg:items-start">
+        <div className="container grid gap-8 lg:grid-cols-[minmax(0,0.8fr)_minmax(0,1.2fr)] lg:items-start lg:gap-14">
           <SectionHeading index="02 / Lead Surgeon" title="Olanrewaju Ladipo, MD" />
-          <div className="grid gap-6 text-lg leading-8 text-muted">
+          <div className="grid gap-5 text-base leading-7 text-muted sm:gap-6 sm:text-lg sm:leading-8">
             <p>
               Dr. Ladipo earned his MD from Lagos State University College of Medicine and completed Internal Medicine
               training at Newark Beth Israel Medical Center in Newark, NJ. He specialized in reconstructive

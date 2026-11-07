@@ -54,7 +54,7 @@ export default function Home() {
       <Hero />
 
       <section className="section">
-        <div className="container grid gap-12 lg:grid-cols-[minmax(0,0.95fr)_minmax(0,1.05fr)] lg:gap-20">
+        <div className="container grid gap-8 lg:grid-cols-[minmax(0,0.95fr)_minmax(0,1.05fr)] lg:gap-20">
           <Reveal>
             <SectionHeading
               index="01 / The Male Standard"
@@ -62,21 +62,24 @@ export default function Home() {
             />
           </Reveal>
           <Reveal delay={100}>
-            <p className="text-lg leading-8 text-muted">
+            <p className="text-base leading-7 text-muted sm:text-lg sm:leading-8">
               Men approach aesthetic and surgical care with distinct priorities: sharper jawlines, athletic torso
               proportions, dense natural hairlines, and minimal visible downtime. Led by Olanrewaju Ladipo, MD —
               trained in reconstructive microsurgery, plastic surgery, and hair restoration — every treatment plan is
               tailored directly to male anatomy and long-term maintenance.
             </p>
-            <div className="mt-10 grid grid-cols-3 gap-6 border-t border-line pt-8">
+            <div className="mt-8 grid grid-cols-3 gap-3 border-t border-line pt-6 sm:mt-10 sm:gap-6 sm:pt-8">
               {facts.map(([value, label]) => (
-                <div key={label}>
-                  <p className="font-serif text-3xl leading-none sm:text-4xl">{value}</p>
+                <div key={label} className="min-w-0">
+                  <p className="font-serif text-2xl leading-none sm:text-4xl">{value}</p>
                   <p className="mt-2 text-xs text-muted">{label}</p>
                 </div>
               ))}
             </div>
-            <Link href="/about" className="link-arrow mt-8 inline-flex items-center gap-2 text-sm font-semibold text-blue">
+            <Link
+              href="/about"
+              className="link-arrow mt-7 inline-flex min-h-10 items-center gap-2 text-sm font-semibold text-blue sm:mt-8"
+            >
               Meet Dr. Ladipo &amp; the Practice <ArrowRight aria-hidden="true" size={15} />
             </Link>
           </Reveal>
@@ -94,7 +97,7 @@ export default function Home() {
               text="Candidacy, technique, recovery windows, and expected outcomes are reviewed one-on-one during consultation."
             />
           </Reveal>
-          <div className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-10 grid gap-4 sm:mt-12 sm:gap-5 md:grid-cols-2 lg:grid-cols-3">
             {signatureProcedures.map((procedure, idx) => (
               <Reveal key={procedure.slug} delay={idx * 70} className="flex">
                 <SpotlightCard className="group flex w-full flex-col">
@@ -102,11 +105,11 @@ export default function Home() {
                     <span className="font-mono text-blue">0{idx + 1}</span>
                     <span>{procedure.category}</span>
                   </div>
-                  <h3 className="mt-4 text-2xl">{procedure.name}</h3>
-                  <p className="mt-3 flex-1 text-sm leading-6 text-muted">{procedure.summary}</p>
+                  <h3 className="mt-3.5 text-2xl sm:mt-4">{procedure.name}</h3>
+                  <p className="mt-2.5 flex-1 text-sm leading-6 text-muted sm:mt-3">{procedure.summary}</p>
                   <Link
                     href={`/procedures/${procedure.slug}`}
-                    className="link-arrow mt-7 inline-flex items-center gap-2 text-xs font-semibold text-ink transition-colors group-hover:text-blue"
+                    className="link-arrow mt-6 inline-flex min-h-10 items-center gap-2 text-xs font-semibold text-ink transition-colors group-hover:text-blue"
                   >
                     Explore {procedure.name} <ArrowRight aria-hidden="true" size={14} />
                   </Link>
@@ -125,13 +128,13 @@ export default function Home() {
               title="Built around privacy, recovery, and lasting structure."
             />
           </Reveal>
-          <div className="mt-14 grid gap-10 md:grid-cols-2 lg:grid-cols-4 lg:gap-8">
+          <div className="mt-10 grid gap-8 sm:mt-14 md:grid-cols-2 lg:grid-cols-4 lg:gap-8">
             {pillars.map(([title, text], index) => (
               <Reveal key={title} delay={index * 80}>
-                <article className="border-t border-line pt-6">
+                <article className="border-t border-line pt-5 sm:pt-6">
                   <span className="font-mono text-xs text-blue">0{index + 1}</span>
-                  <h3 className="mt-4 text-2xl leading-snug">{title}</h3>
-                  <p className="mt-3 text-sm leading-6 text-muted">{text}</p>
+                  <h3 className="mt-3 text-xl leading-snug sm:mt-4 sm:text-2xl">{title}</h3>
+                  <p className="mt-2.5 text-sm leading-6 text-muted sm:mt-3">{text}</p>
                 </article>
               </Reveal>
             ))}
@@ -142,7 +145,7 @@ export default function Home() {
       <section className="section bg-tint">
         <div className="container">
           <Reveal>
-            <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
+            <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
               <SectionHeading
                 index="05 / Male Clinical Results"
                 title="Real male patients. Verified outcomes."
@@ -150,13 +153,13 @@ export default function Home() {
               />
               <Link
                 href="/results"
-                className="link-arrow inline-flex items-center gap-2 text-sm font-semibold text-blue"
+                className="link-arrow inline-flex min-h-10 items-center gap-2 text-sm font-semibold text-blue"
               >
                 View all male results <ArrowRight aria-hidden="true" size={15} />
               </Link>
             </div>
           </Reveal>
-          <div className="mt-12 grid items-start gap-5 md:grid-cols-3">
+          <div className="mt-10 grid items-start gap-5 sm:mt-12 md:grid-cols-3">
             {featuredResults.map((result, index) => (
               <Reveal key={result.src} delay={index * 95}>
                 <ResultFigure {...result} />

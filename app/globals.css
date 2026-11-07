@@ -304,21 +304,33 @@ main:focus {
 .hero-scrim {
   position: absolute;
   inset: 0;
-  background:
-    linear-gradient(
-      90deg,
-      rgba(5, 17, 32, 0.94) 0%,
-      rgba(5, 17, 32, 0.82) 38%,
-      rgba(5, 17, 32, 0.34) 68%,
-      rgba(5, 17, 32, 0.18) 100%
-    ),
-    linear-gradient(
-      180deg,
-      rgba(5, 17, 32, 0.52) 0%,
-      rgba(5, 17, 32, 0) 28%,
-      rgba(5, 17, 32, 0.12) 68%,
-      var(--color-deep) 100%
-    );
+  background: linear-gradient(
+    180deg,
+    rgba(5, 17, 32, 0.32) 0%,
+    rgba(5, 17, 32, 0.24) 26%,
+    rgba(5, 17, 32, 0.82) 62%,
+    var(--color-deep) 96%
+  );
+}
+
+@media (min-width: 768px) {
+  .hero-scrim {
+    background:
+      linear-gradient(
+        90deg,
+        rgba(5, 17, 32, 0.94) 0%,
+        rgba(5, 17, 32, 0.8) 42%,
+        rgba(5, 17, 32, 0.28) 72%,
+        rgba(5, 17, 32, 0.14) 100%
+      ),
+      linear-gradient(
+        180deg,
+        rgba(5, 17, 32, 0.44) 0%,
+        rgba(5, 17, 32, 0) 30%,
+        rgba(5, 17, 32, 0.18) 70%,
+        var(--color-deep) 100%
+      );
+  }
 }
 
 .hero-line {

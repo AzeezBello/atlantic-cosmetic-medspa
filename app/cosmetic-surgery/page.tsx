@@ -28,7 +28,7 @@ export default function CosmeticSurgeryPage() {
             title="Surgical contouring tailored to masculine proportions."
             text="Targeted fat removal and subdermal skin contraction across the torso, abdomen, flanks, chin, and jawline. Candidacy, technique, risks, and recovery are discussed one-on-one during consultation."
           />
-          <div className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-10 grid gap-5 sm:mt-12 md:grid-cols-2 lg:grid-cols-3">
             {surgery.map((procedure) => (
               <SpotlightCard className="group flex flex-col" key={procedure.slug}>
                 <h2 className="text-2xl">{procedure.name}</h2>
@@ -36,14 +36,14 @@ export default function CosmeticSurgeryPage() {
                 <ul role="list" className="mt-5 grid gap-1.5 border-t border-line pt-4 text-xs text-ink/80">
                   {procedure.highlights.map((item) => (
                     <li key={item} className="flex items-center gap-2">
-                      <span aria-hidden="true" className="h-1 w-1 rounded-full bg-blue" />
+                      <span aria-hidden="true" className="h-1 w-1 shrink-0 rounded-full bg-blue" />
                       <span>{item}</span>
                     </li>
                   ))}
                 </ul>
                 <Link
                   href={`/procedures/${procedure.slug}`}
-                  className="link-arrow mt-7 inline-flex items-center gap-2 text-xs font-semibold text-blue"
+                  className="link-arrow mt-6 inline-flex min-h-10 items-center gap-2 text-xs font-semibold text-blue"
                 >
                   Explore {procedure.name} <ArrowRight aria-hidden="true" size={14} />
                 </Link>

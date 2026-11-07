@@ -23,7 +23,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           Skip to main content
         </a>
         <Navbar />
-        <main id="main-content" tabIndex={-1} className="pt-20">
+        <main id="main-content" tabIndex={-1} className="pt-16 sm:pt-20">
           {children}
         </main>
         <Footer />

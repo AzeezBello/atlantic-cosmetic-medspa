@@ -37,15 +37,15 @@ const FRAGMENT_SHADER = `
     float field = noise(p + vec2(t, -t * 0.6)) * 0.65
                 + noise(p * 2.1 - vec2(t * 0.8, t * 0.4)) * 0.35;
 
-    // Architectural topographic contour bands + soft cobalt refraction
-    float contour = smoothstep(0.028, 0.0, abs(fract(field * 6.5) - 0.5));
-    float glow = smoothstep(0.75, 0.1, length(uv - vec2(0.26, 0.42)));
+    // Subtle architectural contour refraction + soft cobalt glow
+    float contour = smoothstep(0.018, 0.0, abs(fract(field * 4.0) - 0.5));
+    float glow = smoothstep(0.75, 0.1, length(uv - vec2(0.24, 0.44)));
 
     vec3 cobalt = vec3(0.059, 0.373, 0.820);
     vec3 steel = vec3(0.498, 0.722, 0.965);
-    vec3 color = cobalt * (glow * 0.24 + field * 0.10) + steel * (contour * 0.11);
+    vec3 color = cobalt * (glow * 0.20 + field * 0.07) + steel * (contour * 0.06);
 
-    float alpha = clamp(glow * 0.36 + contour * 0.16, 0.0, 0.48);
+    float alpha = clamp(glow * 0.28 + contour * 0.08, 0.0, 0.34);
     gl_FragColor = vec4(color, alpha);
   }
 `;

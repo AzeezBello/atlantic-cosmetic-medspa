@@ -27,14 +27,14 @@ export default function AestheticsPage() {
               title="Stronger structure. Natural expression."
               text="Non-surgical facial balancing, submental fat reduction, and subdermal laser tightening calibrated specifically for male bone structure and skin thickness."
             />
-            <div className="mt-10 grid gap-5">
+            <div className="mt-8 grid gap-4 sm:mt-10 sm:gap-5">
               {aesthetics.map((procedure) => (
                 <SpotlightCard className="group" key={procedure.slug}>
                   <h2 className="text-2xl">{procedure.name}</h2>
-                  <p className="mt-3 text-sm leading-6 text-muted">{procedure.summary}</p>
+                  <p className="mt-2.5 text-sm leading-6 text-muted sm:mt-3">{procedure.summary}</p>
                   <Link
                     href={`/procedures/${procedure.slug}`}
-                    className="link-arrow mt-6 inline-flex items-center gap-2 text-xs font-semibold text-blue"
+                    className="link-arrow mt-5 inline-flex min-h-10 items-center gap-2 text-xs font-semibold text-blue"
                   >
                     Explore {procedure.name} <ArrowRight aria-hidden="true" size={14} />
                   </Link>

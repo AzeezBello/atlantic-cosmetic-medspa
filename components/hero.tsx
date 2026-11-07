@@ -12,13 +12,6 @@ import CanvasAtmosphere from '@/components/canvas-atmosphere';
 
 gsap.registerPlugin(ScrollTrigger);
 
-const pillars = [
-  ['Male Lipo 360 & Jawline', '/cosmetic-surgery'],
-  ['FUE Hair Restoration', '/hair-restoration'],
-  ["Men's Injectables & Laser", '/aesthetics'],
-  ['GLP-1 & IV Performance', '/wellness'],
-] as const;
-
 export default function Hero() {
   const heroRef = useRef<HTMLElement>(null);
 
@@ -70,22 +63,22 @@ export default function Hero() {
             fill
             priority
             sizes="100vw"
-            className="object-cover object-[74%_22%]"
+            className="object-cover object-[70%_18%] sm:object-[74%_22%]"
           />
         </div>
-        <CanvasAtmosphere className="mix-blend-screen opacity-75" />
+        <CanvasAtmosphere className="hidden mix-blend-screen opacity-45 sm:block" />
         <div className="hero-scrim" />
       </div>
 
-      <div className="container relative flex min-h-[calc(100svh-5rem)] flex-col justify-between py-16 sm:py-20 lg:py-24">
-        <div className="max-w-2xl pt-4 lg:pt-8">
-          <p className="js-hero-fade font-mono text-xs text-sky">
-            Roswell, Georgia — Men&rsquo;s Surgical &amp; Medical Practice
+      <div className="container relative flex min-h-[calc(100svh-4rem)] flex-col justify-end pb-8 pt-36 sm:min-h-[calc(100svh-5rem)] sm:justify-between sm:py-20 lg:py-24">
+        <div className="max-w-xl sm:pt-4 lg:pt-8">
+          <p className="js-hero-fade font-mono text-[11px] tracking-wide text-sky sm:text-xs">
+            Roswell, Georgia &middot; Men&rsquo;s Surgical Practice
           </p>
 
           <h1
             id="hero-title"
-            className="mt-6 text-[clamp(3.2rem,8.5vw,6.25rem)] leading-[.95] tracking-[-.04em] text-white"
+            className="mt-3.5 text-[clamp(2.4rem,7vw,5.5rem)] leading-[0.98] tracking-[-0.035em] text-white sm:mt-6"
           >
             <span className="hero-line">
               <span className="js-hero-line block">Built for men.</span>
@@ -95,56 +88,43 @@ export default function Hero() {
             </span>
           </h1>
 
-          <p className="js-hero-fade mt-7 max-w-xl text-base leading-7 text-white/80 sm:text-lg sm:leading-8">
-            Discreet surgical contouring, FUE hair restoration, masculine jawline aesthetics, and physician-led
-            metabolic care — planned around male anatomy by Olanrewaju Ladipo, MD.
+          <p className="js-hero-fade mt-4 max-w-lg text-sm leading-6 text-white/78 sm:mt-6 sm:text-base sm:leading-7">
+            Discreet surgical contouring, FUE hair restoration, and masculine aesthetics — planned around male anatomy
+            by Olanrewaju Ladipo, MD.
           </p>
 
-          <div className="js-hero-fade mt-9 flex flex-col gap-3.5 sm:flex-row sm:flex-wrap sm:items-center">
+          <div className="js-hero-fade mt-6 flex flex-col gap-2.5 sm:mt-9 sm:flex-row sm:flex-wrap sm:items-center sm:gap-6">
             <BookButton className="btn btn-primary w-full sm:w-auto" />
-            <Link className="btn btn-ghost w-full sm:w-auto" href="/results">
+            <Link
+              className="link-arrow inline-flex min-h-11 items-center justify-center gap-2 text-sm font-medium text-white/85 transition-colors hover:text-white sm:justify-start"
+              href="/results"
+            >
               View Male Results <ArrowRight aria-hidden="true" size={15} />
             </Link>
           </div>
         </div>
 
-        <div className="js-hero-fade mt-16 border-t border-white/15 pt-7">
-          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-            {pillars.map(([label, href], idx) => (
-              <Link
-                key={href}
-                href={href}
-                className="group flex items-center justify-between rounded-md border border-white/12 bg-white/[0.04] px-4 py-3.5 backdrop-blur-md transition-colors hover:border-sky/60 hover:bg-white/[0.08]"
-              >
-                <span className="flex items-center gap-3 text-sm text-white/90">
-                  <span className="font-mono text-xs text-sky">0{idx + 1}</span>
-                  <span>{label}</span>
-                </span>
-                <ArrowRight
-                  aria-hidden="true"
-                  size={14}
-                  className="text-white/60 transition-transform duration-200 group-hover:translate-x-1 group-hover:text-sky"
-                />
-              </Link>
-            ))}
-          </div>
-
-          <div className="mt-6 flex flex-wrap items-center justify-between gap-4 text-xs text-white/60">
-            <div className="flex flex-wrap gap-x-6 gap-y-2">
-              <span>Established 2016</span>
-              <span>Private Entrance Facility</span>
-              <a href="tel:+16786498280" className="text-white/80 transition-colors hover:text-white">
-                (678) 649-8280
-              </a>
-            </div>
-            <a
-              href="#protocol"
-              className="hidden items-center gap-2 text-white/70 transition-colors hover:text-white sm:inline-flex"
-            >
-              <span>Explore protocol</span>
-              <ArrowDown aria-hidden="true" size={14} />
+        <div className="js-hero-fade mt-8 flex flex-wrap items-center justify-between gap-4 border-t border-white/12 pt-4 text-[11px] text-white/60 sm:mt-16 sm:pt-6 sm:text-xs">
+          <div className="flex flex-wrap items-center gap-x-4 gap-y-1.5 sm:gap-x-5">
+            <span>Est. 2016</span>
+            <span className="text-white/25" aria-hidden="true">
+              /
+            </span>
+            <span>Private Roswell Facility</span>
+            <span className="text-white/25" aria-hidden="true">
+              /
+            </span>
+            <a href="tel:+16786498280" className="text-white/85 transition-colors hover:text-white">
+              (678) 649-8280
             </a>
           </div>
+          <a
+            href="#protocol"
+            className="hidden items-center gap-2 text-white/70 transition-colors hover:text-white sm:inline-flex"
+          >
+            <span>Explore protocol</span>
+            <ArrowDown aria-hidden="true" size={14} />
+          </a>
         </div>
       </div>
     </section>

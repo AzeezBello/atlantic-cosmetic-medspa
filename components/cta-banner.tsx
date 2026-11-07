@@ -6,7 +6,7 @@ export default function CtaBanner() {
       <div className="container flex flex-col items-start gap-8 lg:flex-row lg:items-center lg:justify-between">
         <div className="max-w-xl">
           <div className="index-tag !text-sky">Private Consultation</div>
-          <h2 className="text-3xl leading-tight sm:text-4xl md:text-5xl">
+          <h2 className="text-[clamp(1.75rem,4.5vw,2.85rem)] leading-[1.1] tracking-[-0.02em]">
             Direct answers. Discreet planning. Tailored to your goals.
           </h2>
           <p className="mt-4 text-base leading-7 text-white/75">
@@ -14,11 +14,11 @@ export default function CtaBanner() {
             outcomes.
           </p>
         </div>
-        <div className="flex flex-wrap items-center gap-5">
-          <BookButton />
+        <div className="flex w-full flex-col gap-3 sm:w-auto sm:flex-row sm:flex-wrap sm:items-center sm:gap-4">
+          <BookButton className="btn btn-primary w-full sm:w-auto" />
           <a
             href="tel:+16786498280"
-            className="inline-flex min-h-12 items-center rounded-md border border-white/25 px-5 text-sm font-medium text-white transition-colors hover:border-white/60 hover:bg-white/10"
+            className="btn btn-ghost w-full sm:w-auto"
           >
             Call (678) 649-8280
           </a>

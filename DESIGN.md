@@ -21,7 +21,7 @@ typography:
   fontSans: "'Helvetica Neue', Arial, sans-serif"
   fontMono: "ui-monospace, SFMono-Regular, Menlo, monospace"
   scale:
-    hero: "clamp(3.2rem, 8.5vw, 6.25rem)"
+    hero: "clamp(2.4rem, 7vw, 5.5rem)"
     h1: "clamp(2.5rem, 5vw, 4.25rem)"
     h2: "clamp(2rem, 3.8vw, 3.25rem)"
     h3: "1.5rem"

@@ -73,7 +73,7 @@ export default function Footer() {
                   href={href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex min-h-9 min-w-9 items-center justify-center rounded-md border border-white/14 px-2.5 text-white/80 transition-colors hover:border-sky hover:text-white"
+                  className="inline-flex min-h-11 min-w-11 items-center justify-center rounded-md border border-white/14 px-3 text-white/80 transition-colors hover:border-sky hover:text-white"
                 >
                   {Icon ? <Icon aria-hidden="true" size={16} /> : <span className="text-xs">{label}</span>}
                 </a>

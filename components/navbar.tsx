@@ -43,12 +43,18 @@ export default function Navbar() {
   }, [pathname]);
 
   useEffect(() => {
-    if (!servicesOpen) return;
+    if (!servicesOpen && !open) return;
     const onKey = (event: KeyboardEvent) => {
-      if (event.key === 'Escape') setServicesOpen(false);
+      if (event.key === 'Escape') {
+        setServicesOpen(false);
+        setOpen(false);
+      }
     };
     const onClick = (event: MouseEvent) => {
-      if (headerRef.current && !headerRef.current.contains(event.target as Node)) setServicesOpen(false);
+      if (headerRef.current && !headerRef.current.contains(event.target as Node)) {
+        setServicesOpen(false);
+        setOpen(false);
+      }
     };
     document.addEventListener('keydown', onKey);
     document.addEventListener('mousedown', onClick);
@@ -56,19 +62,19 @@ export default function Navbar() {
       document.removeEventListener('keydown', onKey);
       document.removeEventListener('mousedown', onClick);
     };
-  }, [servicesOpen]);
+  }, [servicesOpen, open]);
 
   return (
     <header
       ref={headerRef}
-      className="fixed top-0 z-50 w-full border-b border-line/80 bg-white/92 backdrop-blur-xl"
+      className="fixed top-0 z-50 w-full border-b border-line/80 bg-white/94 backdrop-blur-xl"
       onMouseLeave={() => setServicesOpen(false)}
       onBlur={(event) => {
         if (!event.currentTarget.contains(event.relatedTarget as Node | null)) setServicesOpen(false);
       }}
     >
       <div aria-hidden="true" className="scroll-progress-bar h-[2px] w-full bg-blue" />
-      <div className="container flex h-20 items-center justify-between">
+      <div className="container flex h-16 items-center justify-between sm:h-20">
         <Link
           href="/"
           aria-label="Atlantic Men's Surgery & MedSpa home"
@@ -124,10 +130,10 @@ export default function Navbar() {
           aria-label={open ? 'Close menu' : 'Open menu'}
           aria-expanded={open}
           aria-controls="mobile-navigation"
-          className="flex h-11 w-11 items-center justify-center rounded-md border border-line bg-white transition-colors hover:border-blue lg:hidden"
+          className="flex h-11 w-11 items-center justify-center rounded-md border border-line bg-white text-ink transition-colors hover:border-blue lg:hidden"
           onClick={() => setOpen(!open)}
         >
-          {open ? <X aria-hidden="true" size={22} /> : <Menu aria-hidden="true" size={22} />}
+          {open ? <X aria-hidden="true" size={20} /> : <Menu aria-hidden="true" size={20} />}
         </button>
       </div>
 
@@ -172,13 +178,15 @@ export default function Navbar() {
       {open && (
         <div
           id="mobile-navigation"
-          className="mobile-menu max-h-[calc(100svh-5rem)] overflow-y-auto border-t border-line/70 bg-white/98 px-4 pb-6 pt-2 backdrop-blur-xl lg:hidden"
+          className="mobile-menu max-h-[calc(100svh-4rem)] overflow-y-auto border-t border-line/80 bg-white pb-6 pt-2 shadow-[0_24px_48px_rgba(5,17,32,0.12)] sm:max-h-[calc(100svh-5rem)] lg:hidden"
         >
           <nav aria-label="Mobile" className="container grid">
             <Link
               href="/about"
               aria-current={isActive('/about') ? 'page' : undefined}
-              className={`border-b border-line/70 py-3.5 text-sm ${isActive('/about') ? 'font-semibold text-ink' : ''}`}
+              className={`flex min-h-12 items-center border-b border-line/70 text-sm ${
+                isActive('/about') ? 'font-semibold text-blue' : 'font-medium text-ink'
+              }`}
             >
               About
             </Link>
@@ -188,34 +196,39 @@ export default function Navbar() {
               aria-expanded={mobileServicesOpen}
               aria-controls="mobile-services"
               onClick={() => setMobileServicesOpen((value) => !value)}
-              className={`flex items-center justify-between border-b border-line/70 py-3.5 text-left text-sm ${
-                isServicesActive ? 'font-semibold text-ink' : ''
+              className={`flex min-h-12 items-center justify-between border-b border-line/70 text-left text-sm ${
+                isServicesActive ? 'font-semibold text-blue' : 'font-medium text-ink'
               }`}
             >
-              Men&rsquo;s Services
+              <span>Men&rsquo;s Services</span>
               <ChevronDown
                 aria-hidden="true"
                 size={16}
-                className={`transition-transform duration-300 ${mobileServicesOpen ? 'rotate-180' : ''}`}
+                className={`text-muted transition-transform duration-300 ${mobileServicesOpen ? 'rotate-180' : ''}`}
               />
             </button>
             {mobileServicesOpen && (
-              <div id="mobile-services" className="grid gap-5 border-b border-line/70 py-4 pl-4">
-                {services.map(([name, href]) => (
-                  <div key={href}>
+              <div id="mobile-services" className="grid gap-3 border-b border-line/70 py-4">
+                {services.map(([name, href, summary]) => (
+                  <div key={href} className="rounded-lg border border-line bg-tint/60 p-3.5">
                     <Link
                       href={href}
-                      className={`text-sm ${isActive(href) ? 'font-semibold text-blue' : 'font-medium text-ink'}`}
+                      className={`block font-serif text-base ${
+                        isActive(href) ? 'text-blue' : 'text-ink'
+                      }`}
                     >
                       {name}
                     </Link>
-                    <ul className="mt-2 grid gap-2 pl-3">
+                    <p className="mt-0.5 text-xs text-muted">{summary}</p>
+                    <ul className="mt-2.5 flex flex-wrap gap-1.5">
                       {proceduresByCategory(href).map((procedure) => (
                         <li key={procedure.slug}>
                           <Link
                             href={`/procedures/${procedure.slug}`}
-                            className={`text-sm ${
-                              pathname === `/procedures/${procedure.slug}` ? 'text-blue' : 'text-muted'
+                            className={`inline-flex min-h-8 items-center rounded border px-2.5 py-1 text-xs transition-colors ${
+                              pathname === `/procedures/${procedure.slug}`
+                                ? 'border-blue bg-blue text-white'
+                                : 'border-line bg-white text-ink/85 hover:border-blue hover:text-blue'
                             }`}
                           >
                             {procedure.name}
@@ -233,13 +246,30 @@ export default function Navbar() {
                 key={href}
                 href={href}
                 aria-current={isActive(href) ? 'page' : undefined}
-                className={`border-b border-line/70 py-3.5 text-sm ${isActive(href) ? 'font-semibold text-ink' : ''}`}
+                className={`flex min-h-12 items-center border-b border-line/70 text-sm ${
+                  isActive(href) ? 'font-semibold text-blue' : 'font-medium text-ink'
+                }`}
               >
                 {label}
               </Link>
             ))}
 
-            <BookButton className="btn btn-primary mt-5 w-full" />
+            <Link
+              href="/our-clinic"
+              aria-current={isActive('/our-clinic') ? 'page' : undefined}
+              className={`flex min-h-12 items-center border-b border-line/70 text-sm ${
+                isActive('/our-clinic') ? 'font-semibold text-blue' : 'font-medium text-ink'
+              }`}
+            >
+              Our Roswell Clinic
+            </Link>
+
+            <div className="mt-5 grid gap-2.5 sm:grid-cols-2">
+              <BookButton className="btn btn-primary w-full" />
+              <a href="tel:+16786498280" className="btn btn-outline w-full">
+                Call (678) 649-8280
+              </a>
+            </div>
           </nav>
         </div>
       )}

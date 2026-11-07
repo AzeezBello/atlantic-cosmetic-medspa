@@ -10,12 +10,12 @@ export default function BrandMark({ tone = 'dark', className = '' }: BrandMarkPr
   const crestBg = isLight ? 'bg-white/10 border-white/25' : 'bg-deep border-deep';
 
   return (
-    <span className={`inline-flex items-center gap-3.5 ${className}`}>
+    <span className={`inline-flex items-center gap-2.5 sm:gap-3.5 ${className}`}>
       <span
         aria-hidden="true"
-        className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-md border ${crestBg}`}
+        className={`flex h-9 w-9 shrink-0 items-center justify-center rounded-md border sm:h-10 sm:w-10 ${crestBg}`}
       >
-        <svg viewBox="0 0 32 32" className="h-5 w-5" aria-hidden="true">
+        <svg viewBox="0 0 32 32" className="h-4 w-4 sm:h-5 sm:w-5" aria-hidden="true">
           <path
             d="M16 5L6.5 27h3.9l2.1-5.1h7l2.1 5.1h3.9L16 5zm-2.2 13.6L16 12.9l2.2 5.7h-4.4z"
             fill="#ffffff"
@@ -24,8 +24,10 @@ export default function BrandMark({ tone = 'dark', className = '' }: BrandMarkPr
         </svg>
       </span>
       <span className="flex flex-col leading-none">
-        <span className={`font-serif text-xl tracking-tight ${primaryText}`}>Atlantic</span>
-        <span className={`mt-1 text-[11px] font-medium ${secondaryText}`}>Men&rsquo;s Surgery &amp; MedSpa</span>
+        <span className={`font-serif text-lg tracking-tight sm:text-xl ${primaryText}`}>Atlantic</span>
+        <span className={`mt-1 text-[10px] font-medium sm:text-[11px] ${secondaryText}`}>
+          Men&rsquo;s Surgery &amp; MedSpa
+        </span>
       </span>
     </span>
   );

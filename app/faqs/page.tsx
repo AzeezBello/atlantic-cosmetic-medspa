@@ -1,3 +1,4 @@
+import { ChevronDown } from 'lucide-react';
 import type { Metadata } from 'next';
 import CtaBanner from '@/components/cta-banner';
 import SectionHeading from '@/components/section-heading';
@@ -46,11 +47,16 @@ export default function FaqsPage() {
             title="Clear answers before your consultation."
             text="Every patient’s anatomy and medical history are distinct; specific surgical and non-surgical recommendations are finalized one-on-one."
           />
-          <div className="mt-12 grid gap-4">
+          <div className="mt-10 grid gap-4 sm:mt-12">
             {faqs.map(({ question, answer }, idx) => (
               <details key={question} className="card group" open={idx === 0}>
-                <summary className="cursor-pointer list-none font-serif text-xl leading-snug text-ink marker:content-none">
-                  {question}
+                <summary className="flex cursor-pointer list-none items-start justify-between gap-4 font-serif text-lg leading-snug text-ink marker:content-none sm:text-xl">
+                  <span>{question}</span>
+                  <ChevronDown
+                    aria-hidden="true"
+                    size={18}
+                    className="mt-1 shrink-0 text-blue transition-transform duration-200 group-open:rotate-180"
+                  />
                 </summary>
                 <p className="mt-4 border-t border-line pt-4 text-sm leading-7 text-muted sm:text-base">{answer}</p>
               </details>

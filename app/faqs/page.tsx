@@ -43,7 +43,7 @@ export default function FaqsPage() {
         <div className="container max-w-3xl">
           <SectionHeading
             as="h1"
-            index="01 / Frequently Asked Questions"
+            index="Frequently Asked Questions"
             title="Clear answers before your consultation."
             text="Every patient’s anatomy and medical history are distinct; specific surgical and non-surgical recommendations are finalized one-on-one."
           />

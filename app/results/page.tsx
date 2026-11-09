@@ -17,7 +17,7 @@ export default function ResultsPage() {
         <div className="container">
           <SectionHeading
             as="h1"
-            index="01 / Male Clinical Gallery"
+            index="Male Clinical Gallery"
             title="Real male patients. Verified outcomes."
             text="A curated clinical gallery of male torso sculpting and FUE hair restoration performed at our Roswell practice. Individual results vary."
           />

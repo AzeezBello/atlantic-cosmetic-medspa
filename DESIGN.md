@@ -98,11 +98,11 @@ palette:
 
 ## Typography
 
-Editorial authority comes from pairing high-contrast serif display headings (`font-serif`) with clean grotesque body and tabular monospace index markers (`01`–`04`).
+Editorial authority comes from pairing high-contrast serif display headings (`font-serif`) with clean grotesque body and restrained monospace section tags.
 
 - **Display & Headings**: `Georgia, 'Times New Roman', serif`, weight `400`, tight display leading (`0.95`–`1.08`), `text-wrap: balance` on headings and `text-wrap: pretty` on body copy.
 - **Hierarchy discipline**: Exactly one `<h1>` per route. Never skip heading levels (`<h1>` → `<h2>` → `<h3>`).
-- **Restrained metadata**: Avoid stacking tracked-out uppercase eyebrows above every heading or middle-dot-stuffed metadata strings. Use numbered monospace indices (`01`, `02`) or clean architectural hairline dividers where structural grouping is needed.
+- **Restrained metadata**: Avoid stacking tracked-out uppercase eyebrows above every heading, numbered step prefixes (`01 /`, `Step 1`), or middle-dot-stuffed metadata strings. Use clean architectural hairline dividers and concise section tags where structural grouping is needed.
 
 ## Layout
 

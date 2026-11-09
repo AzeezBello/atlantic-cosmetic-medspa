@@ -23,7 +23,7 @@ export default function WellnessPage() {
           <div className="grid gap-8 lg:grid-cols-[minmax(0,1fr)_auto] lg:items-center lg:gap-10">
             <SectionHeading
               as="h1"
-              index="01 / Atlantic Men's Wellness"
+              index="Atlantic Men's Wellness"
               title="Metabolic performance and cellular recovery."
               text="Atlantic Wellness Center pairs physician-supervised GLP-1 weight management, targeted IV hydration, and regenerative biologic protocols under one roof."
             />
@@ -76,7 +76,7 @@ export default function WellnessPage() {
           </div>
           <div className="order-1 lg:order-2">
             <SectionHeading
-              index="02 / Integrated Care"
+              index="Integrated Care"
               title="Structured support before and after procedures."
               text="Many men begin with GLP-1 metabolic management to hit target body composition ahead of Male Lipo 360, or pair IV micronutrient therapy and regenerative signaling factors with FUE hair restoration."
             />

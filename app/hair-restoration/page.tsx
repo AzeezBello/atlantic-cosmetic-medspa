@@ -32,7 +32,7 @@ export default function HairRestorationPage() {
             />
           </div>
           <div className="order-1 lg:order-2">
-            <div className="index-tag">01 / Male Hair Restoration</div>
+            <div className="index-tag">Male Hair Restoration</div>
             <h1 className="text-[clamp(2rem,6vw,3.5rem)] leading-[1.08] tracking-[-0.02em]">
               Rebuild a natural, short-fade friendly hairline.
             </h1>
@@ -57,7 +57,7 @@ export default function HairRestorationPage() {
       <section className="section bg-tint">
         <div className="container">
           <SectionHeading
-            index="02 / Verified FUE Outcomes"
+            index="Verified FUE Outcomes"
             title="Male hairline & crown restoration."
             text="Individual results vary based on donor density, hair-loss pattern, and healing."
           />

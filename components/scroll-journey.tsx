@@ -12,7 +12,6 @@ gsap.registerPlugin(ScrollTrigger);
 
 const stages = [
   {
-    index: '01',
     title: 'Torso & Jawline Surgery',
     subtitle: 'Athletic body & profile sculpting',
     description:
@@ -25,7 +24,6 @@ const stages = [
     caption: 'Clinical Outcome — Male Lipo 360',
   },
   {
-    index: '02',
     title: 'FUE Hair Restoration',
     subtitle: 'Natural density, zero linear strip scar',
     description:
@@ -38,7 +36,6 @@ const stages = [
     caption: 'Clinical Outcome — FUE Hair Transplant',
   },
   {
-    index: '03',
     title: "Men's Facial Aesthetics",
     subtitle: 'Angular structure without an overdone look',
     description:
@@ -51,7 +48,6 @@ const stages = [
     caption: 'Editorial Focus — Jawline & Lower-Face Structure',
   },
   {
-    index: '04',
     title: 'Metabolic & Recovery Wellness',
     subtitle: 'Internal performance under medical oversight',
     description:
@@ -66,8 +62,7 @@ const stages = [
 ] as const;
 
 /**
- * Scroll-scrubbed multi-stage architectural journey inspired by oso95/scroll-world
- * and built with @gsap/react useGSAP + ScrollTrigger best practices.
+ * Scroll-scrubbed clinical discipline showcase built with @gsap/react useGSAP + ScrollTrigger.
  */
 export default function ScrollJourney() {
   const sectionRef = useRef<HTMLElement>(null);
@@ -112,7 +107,7 @@ export default function ScrollJourney() {
     <section id="protocol" ref={sectionRef} className="section bg-deep text-white scroll-mt-20">
       <div className="container">
         <div className="max-w-2xl">
-          <div className="index-tag !text-sky">02 / Clinical Architecture</div>
+          <div className="index-tag !text-sky">Clinical Architecture</div>
           <h2 className="text-[clamp(1.75rem,4.5vw,2.85rem)] leading-[1.1] tracking-[-0.02em] text-white">
             Four disciplines engineered exclusively around male anatomy.
           </h2>
@@ -133,21 +128,16 @@ export default function ScrollJourney() {
                 const isCurrent = activeIndex === idx;
                 return (
                   <article
-                    key={stage.index}
+                    key={stage.title}
                     className={`js-journey-stage rounded-xl border border-white/15 bg-white/[0.04] p-5 transition-colors duration-300 sm:p-8 ${
                       isCurrent
                         ? 'lg:border-sky/50 lg:bg-white/[0.06]'
                         : 'lg:border-white/12 lg:bg-white/[0.02] lg:hover:border-white/25'
                     }`}
                   >
-                    <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
-                      <span className="font-mono text-xs text-sky">
-                        Stage {stage.index} / 0{stages.length}
-                      </span>
-                      <span className="text-xs text-white/60">{stage.subtitle}</span>
-                    </div>
+                    <p className="font-mono text-xs text-sky">{stage.subtitle}</p>
 
-                    <h3 className="mt-3 text-2xl text-white sm:mt-4 sm:text-3xl">{stage.title}</h3>
+                    <h3 className="mt-2.5 text-2xl text-white sm:mt-3 sm:text-3xl">{stage.title}</h3>
                     <p className="mt-2.5 text-sm leading-6 text-white/75 sm:mt-3 sm:text-base sm:leading-7">
                       {stage.description}
                     </p>
@@ -161,7 +151,7 @@ export default function ScrollJourney() {
                       ))}
                     </ul>
 
-                    {/* Inline stage visual on mobile/tablet so non-desktop users see every stage clearly */}
+                    {/* Inline visual on mobile/tablet so non-desktop users see every discipline clearly */}
                     <div className="mt-5 overflow-hidden rounded-lg border border-white/12 bg-navy/40 lg:hidden">
                       <div className="relative aspect-[16/10] w-full">
                         <Image
@@ -187,7 +177,7 @@ export default function ScrollJourney() {
             </div>
           </div>
 
-          {/* Sticky scroll-scrubbed stage viewport on desktop */}
+          {/* Sticky scroll-scrubbed viewport on desktop */}
           <div className="hidden lg:sticky lg:top-28 lg:block">
             <div className="overflow-hidden rounded-2xl border border-white/15 bg-navy/30 shadow-[0_28px_72px_rgba(0,0,0,0.42)]">
               <div className="relative aspect-[4/5] w-full overflow-hidden bg-deep">
@@ -195,7 +185,7 @@ export default function ScrollJourney() {
                   const active = activeIndex === idx;
                   return (
                     <div
-                      key={stage.index}
+                      key={stage.title}
                       aria-hidden={!active}
                       className={`absolute inset-0 transition-opacity duration-500 ${
                         active ? 'opacity-100' : 'pointer-events-none opacity-0'
@@ -215,9 +205,7 @@ export default function ScrollJourney() {
                 })}
               </div>
               <div className="flex items-center justify-between border-t border-white/12 px-6 py-4 text-xs">
-                <span className="font-mono text-sky">
-                  {stages[activeIndex].index} — {stages[activeIndex].title}
-                </span>
+                <span className="font-mono text-sky">{stages[activeIndex].title}</span>
                 <span className="text-white/65">{stages[activeIndex].caption}</span>
               </div>
             </div>

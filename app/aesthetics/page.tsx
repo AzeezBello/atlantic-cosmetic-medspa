@@ -23,7 +23,7 @@ export default function AestheticsPage() {
           <div>
             <SectionHeading
               as="h1"
-              index="01 / Men's Facial & Laser Aesthetics"
+              index="Men's Facial & Laser Aesthetics"
               title="Stronger structure. Natural expression."
               text="Non-surgical facial balancing, submental fat reduction, and subdermal laser tightening calibrated specifically for male bone structure and skin thickness."
             />

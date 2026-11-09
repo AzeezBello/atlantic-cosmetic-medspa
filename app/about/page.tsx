@@ -18,7 +18,7 @@ export default function AboutPage() {
           <div>
             <SectionHeading
               as="h1"
-              index="01 / About Atlantic"
+              index="About Atlantic"
               title="Dedicated surgical and medical care built around men."
             />
             <div className="mt-6 grid gap-5 text-base leading-7 text-muted sm:mt-8 sm:gap-6 sm:text-lg sm:leading-8">
@@ -52,7 +52,7 @@ export default function AboutPage() {
 
       <section className="section bg-tint">
         <div className="container grid gap-8 lg:grid-cols-[minmax(0,0.8fr)_minmax(0,1.2fr)] lg:items-start lg:gap-14">
-          <SectionHeading index="02 / Lead Surgeon" title="Olanrewaju Ladipo, MD" />
+          <SectionHeading index="Lead Surgeon" title="Olanrewaju Ladipo, MD" />
           <div className="grid gap-5 text-base leading-7 text-muted sm:gap-6 sm:text-lg sm:leading-8">
             <p>
               Dr. Ladipo earned his MD from Lagos State University College of Medicine and completed Internal Medicine

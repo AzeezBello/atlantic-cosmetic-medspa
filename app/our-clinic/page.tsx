@@ -23,7 +23,7 @@ export default function OurClinicPage() {
         <div className="container grid gap-8 lg:grid-cols-2 lg:items-center lg:gap-14">
           <SectionHeading
             as="h1"
-            index="01 / Our Roswell Facility"
+            index="Our Roswell Facility"
             title="Engineered for discretion, safety, and comfort."
           />
           <div className="grid gap-5 text-base leading-7 text-muted sm:gap-6 sm:text-lg sm:leading-8">

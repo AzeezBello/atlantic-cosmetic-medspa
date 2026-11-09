@@ -57,7 +57,7 @@ export default function Home() {
         <div className="container grid gap-8 lg:grid-cols-[minmax(0,0.95fr)_minmax(0,1.05fr)] lg:gap-20">
           <Reveal>
             <SectionHeading
-              index="01 / The Male Standard"
+              index="The Male Standard"
               title="Anatomical precision. Natural lines. Zero guesswork."
             />
           </Reveal>
@@ -92,7 +92,7 @@ export default function Home() {
         <div className="container">
           <Reveal>
             <SectionHeading
-              index="03 / Signature Male Procedures"
+              index="Signature Male Procedures"
               title="Targeted treatments with clear clinical purpose."
               text="Candidacy, technique, recovery windows, and expected outcomes are reviewed one-on-one during consultation."
             />
@@ -101,11 +101,8 @@ export default function Home() {
             {signatureProcedures.map((procedure, idx) => (
               <Reveal key={procedure.slug} delay={idx * 70} className="flex">
                 <SpotlightCard className="group flex w-full flex-col">
-                  <div className="flex items-center justify-between text-xs text-muted">
-                    <span className="font-mono text-blue">0{idx + 1}</span>
-                    <span>{procedure.category}</span>
-                  </div>
-                  <h3 className="mt-3.5 text-2xl sm:mt-4">{procedure.name}</h3>
+                  <p className="font-mono text-xs text-blue">{procedure.category}</p>
+                  <h3 className="mt-3 text-2xl sm:mt-3.5">{procedure.name}</h3>
                   <p className="mt-2.5 flex-1 text-sm leading-6 text-muted sm:mt-3">{procedure.summary}</p>
                   <Link
                     href={`/procedures/${procedure.slug}`}
@@ -124,7 +121,7 @@ export default function Home() {
         <div className="container">
           <Reveal>
             <SectionHeading
-              index="04 / Why Men Choose Atlantic"
+              index="Why Men Choose Atlantic"
               title="Built around privacy, recovery, and lasting structure."
             />
           </Reveal>
@@ -132,8 +129,7 @@ export default function Home() {
             {pillars.map(([title, text], index) => (
               <Reveal key={title} delay={index * 80}>
                 <article className="border-t border-line pt-5 sm:pt-6">
-                  <span className="font-mono text-xs text-blue">0{index + 1}</span>
-                  <h3 className="mt-3 text-xl leading-snug sm:mt-4 sm:text-2xl">{title}</h3>
+                  <h3 className="text-xl leading-snug sm:text-2xl">{title}</h3>
                   <p className="mt-2.5 text-sm leading-6 text-muted sm:mt-3">{text}</p>
                 </article>
               </Reveal>
@@ -147,7 +143,7 @@ export default function Home() {
           <Reveal>
             <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
               <SectionHeading
-                index="05 / Male Clinical Results"
+                index="Male Clinical Results"
                 title="Real male patients. Verified outcomes."
                 text="Unretouched clinical photographs across Male Lipo 360 and FUE hair transplantation. Individual results vary."
               />

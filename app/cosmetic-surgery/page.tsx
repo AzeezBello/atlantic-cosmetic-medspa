@@ -24,7 +24,7 @@ export default function CosmeticSurgeryPage() {
         <div className="container">
           <SectionHeading
             as="h1"
-            index="01 / Cosmetic Surgery for Men"
+            index="Cosmetic Surgery for Men"
             title="Surgical contouring tailored to masculine proportions."
             text="Targeted fat removal and subdermal skin contraction across the torso, abdomen, flanks, chin, and jawline. Candidacy, technique, risks, and recovery are discussed one-on-one during consultation."
           />
@@ -57,7 +57,7 @@ export default function CosmeticSurgeryPage() {
         <section className="section bg-tint">
           <div className="container">
             <SectionHeading
-              index="02 / Surgical Outcome"
+              index="Surgical Outcome"
               title="Male Lipo 360 before and after."
               text="Individual results vary based on anatomy, skin elasticity, and post-operative care."
             />

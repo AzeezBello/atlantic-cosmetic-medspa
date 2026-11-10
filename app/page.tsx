@@ -16,8 +16,8 @@ const pillars: [string, string][] = [
     'A private clinic arrival and calm architectural setting protect your confidentiality from consultation through follow-up.',
   ],
   [
-    'Engineered for male proportions',
-    'Surgical torso sculpting, jawline definition, and neurotoxin dosing planned specifically around masculine structure — never feminized or overdone.',
+    'Engineered for natural proportions',
+    'Surgical torso sculpting, jawline definition, and neurotoxin dosing planned around strong, natural structure — never overdone.',
   ],
   [
     'Short-fade friendly FUE',
@@ -31,7 +31,7 @@ const pillars: [string, string][] = [
 
 const facts: [string, string][] = [
   ['2016', 'Practice Established'],
-  ['4', 'Male Care Disciplines'],
+  ['4', 'Care Disciplines'],
   ['Roswell', 'Georgia Facility'],
 ];
 
@@ -57,16 +57,16 @@ export default function Home() {
         <div className="container grid gap-8 lg:grid-cols-[minmax(0,0.95fr)_minmax(0,1.05fr)] lg:gap-20">
           <Reveal>
             <SectionHeading
-              index="The Male Standard"
+              index="Our Standard"
               title="Anatomical precision. Natural lines. Zero guesswork."
             />
           </Reveal>
           <Reveal delay={100}>
             <p className="text-base leading-7 text-muted sm:text-lg sm:leading-8">
-              Men approach aesthetic and surgical care with distinct priorities: sharper jawlines, athletic torso
+              Our patients approach aesthetic and surgical care with clear priorities: sharper jawlines, athletic torso
               proportions, dense natural hairlines, and minimal visible downtime. Led by Olanrewaju Ladipo, MD —
               trained in reconstructive microsurgery, plastic surgery, and hair restoration — every treatment plan is
-              tailored directly to male anatomy and long-term maintenance.
+              tailored directly to your anatomy and long-term maintenance.
             </p>
             <div className="mt-8 grid grid-cols-3 gap-3 border-t border-line pt-6 sm:mt-10 sm:gap-6 sm:pt-8">
               {facts.map(([value, label]) => (
@@ -92,7 +92,7 @@ export default function Home() {
         <div className="container">
           <Reveal>
             <SectionHeading
-              index="Signature Male Procedures"
+              index="Signature Procedures"
               title="Targeted treatments with clear clinical purpose."
               text="Candidacy, technique, recovery windows, and expected outcomes are reviewed one-on-one during consultation."
             />
@@ -121,7 +121,7 @@ export default function Home() {
         <div className="container">
           <Reveal>
             <SectionHeading
-              index="Why Men Choose Atlantic"
+              index="Why Choose Atlantic"
               title="Built around privacy, recovery, and lasting structure."
             />
           </Reveal>
@@ -143,15 +143,15 @@ export default function Home() {
           <Reveal>
             <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
               <SectionHeading
-                index="Male Clinical Results"
-                title="Real male patients. Verified outcomes."
-                text="Unretouched clinical photographs across Male Lipo 360 and FUE hair transplantation. Individual results vary."
+                index="Clinical Results"
+                title="Real patients. Verified outcomes."
+                text="Unretouched clinical photographs across Lipo 360 and FUE hair transplantation. Individual results vary."
               />
               <Link
                 href="/results"
                 className="link-arrow inline-flex min-h-10 items-center gap-2 text-sm font-semibold text-blue"
               >
-                View all male results <ArrowRight aria-hidden="true" size={15} />
+                View all results <ArrowRight aria-hidden="true" size={15} />
               </Link>
             </div>
           </Reveal>

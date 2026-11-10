@@ -12,8 +12,8 @@ export type Result = {
 export const results: Result[] = [
   {
     src: '/images/results/lipo-360-male-front.avif',
-    alt: 'Male patient before and after Lipo 360, front torso view showing leaner abdomen and sculpted flanks',
-    label: 'Male Lipo 360',
+    alt: 'Patient before and after Lipo 360, front torso view showing leaner abdomen and sculpted flanks',
+    label: 'Lipo 360',
     detail: 'Abdomen & flank contouring',
     width: 600,
     height: 479,
@@ -21,7 +21,7 @@ export const results: Result[] = [
   },
   {
     src: '/images/results/hair-transplant-1.png',
-    alt: 'Male patient before and after FUE hair transplant, front view showing restored frontal hairline density',
+    alt: 'Patient before and after FUE hair transplant, front view showing restored frontal hairline density',
     label: 'FUE Hair Transplant',
     detail: 'Frontal hairline restoration',
     width: 1400,
@@ -30,7 +30,7 @@ export const results: Result[] = [
   },
   {
     src: '/images/results/hair-transplant-2.png',
-    alt: 'Male patient before and after FUE hair transplant, front view showing reconstructed hairline and temples',
+    alt: 'Patient before and after FUE hair transplant, front view showing reconstructed hairline and temples',
     label: 'FUE Hair Transplant',
     detail: 'Hairline & temple framing',
     width: 1400,
@@ -39,7 +39,7 @@ export const results: Result[] = [
   },
   {
     src: '/images/results/hair-transplant-3.png',
-    alt: 'Male patient before and after FUE hair transplant, top-down view showing dense frontal hairline and crown fill',
+    alt: 'Patient before and after FUE hair transplant, top-down view showing dense frontal hairline and crown fill',
     label: 'FUE Hair Transplant',
     detail: 'Top hairline & density',
     width: 1400,
@@ -48,7 +48,7 @@ export const results: Result[] = [
   },
 ];
 
-/** Featured male outcomes displayed on the home page. */
+/** Featured outcomes displayed on the home page. */
 export const featuredResults = results.slice(0, 3);
 
 export function resultsFor(procedure: string) {

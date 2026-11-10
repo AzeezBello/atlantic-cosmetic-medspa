@@ -13,7 +13,7 @@ const icons = { Instagram, Facebook };
 
 const pages: [string, string][] = [
   ['Our Clinic', '/our-clinic'],
-  ['Male Results', '/results'],
+  ['Results', '/results'],
   ['FAQs', '/faqs'],
   ['Payment Plans', '/payment-plans'],
 ];
@@ -23,12 +23,12 @@ export default function Footer() {
     <footer className="bg-deep py-16 text-white border-t border-white/10">
       <div className="container grid gap-10 md:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1fr] lg:items-start">
         <div>
-          <Link href="/" aria-label="Atlantic Men's Surgery & MedSpa home" className="inline-block">
+          <Link href="/" aria-label="Atlantic Cosmetic Surgery & MedSpa home" className="inline-block">
             <BrandMark tone="light" />
           </Link>
           <p className="mt-4 max-w-xs text-sm leading-6 text-white/65">
-            Surgical body &amp; jawline contouring, FUE hair restoration, men&rsquo;s facial aesthetics, and
-            physician-directed metabolic care.
+            Surgical body &amp; jawline contouring, FUE hair restoration, facial aesthetics, and physician-directed
+            metabolic care.
           </p>
         </div>
 
@@ -80,7 +80,7 @@ export default function Footer() {
               );
             })}
           </div>
-          <span className="text-xs text-white/55">© 2026 Atlantic Men&rsquo;s Surgery &amp; MedSpa</span>
+          <span className="text-xs text-white/55">© 2026 Atlantic Cosmetic Surgery &amp; MedSpa</span>
         </div>
       </div>
     </footer>

@@ -8,9 +8,9 @@ import SpotlightCard from '@/components/spotlight-card';
 import { proceduresByCategory } from '@/lib/procedures';
 
 export const metadata: Metadata = {
-  title: "Men's Aesthetics",
+  title: 'Facial & Laser Aesthetics',
   description:
-    "Masculine jawline and chin fillers, conservative neurotoxins, Kybella® submental reduction, and Endolift® laser skin tightening for men in Roswell, GA.",
+    'Jawline and chin fillers, conservative neurotoxins, Kybella® submental reduction, and Endolift® laser skin tightening in Roswell, GA.',
 };
 
 const aesthetics = proceduresByCategory('/aesthetics');
@@ -23,9 +23,9 @@ export default function AestheticsPage() {
           <div>
             <SectionHeading
               as="h1"
-              index="Men's Facial & Laser Aesthetics"
+              index="Facial & Laser Aesthetics"
               title="Stronger structure. Natural expression."
-              text="Non-surgical facial balancing, submental fat reduction, and subdermal laser tightening calibrated specifically for male bone structure and skin thickness."
+              text="Non-surgical facial balancing, submental fat reduction, and subdermal laser tightening calibrated for strong bone structure and natural expression."
             />
             <div className="mt-8 grid gap-4 sm:mt-10 sm:gap-5">
               {aesthetics.map((procedure) => (
@@ -47,7 +47,7 @@ export default function AestheticsPage() {
             <div className="relative aspect-[3/4] w-full">
               <Image
                 src="/images/mens-jawline.avif"
-                alt="Editorial profile portrait illustrating angular masculine jawline and neck definition"
+                alt="Editorial profile portrait illustrating angular jawline and neck definition"
                 fill
                 priority
                 sizes="(min-width: 1024px) 40vw, 100vw"

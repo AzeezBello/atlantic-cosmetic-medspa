@@ -7,7 +7,7 @@ import SectionHeading from '@/components/section-heading';
 export const metadata: Metadata = {
   title: 'About Atlantic',
   description:
-    "Atlantic Men's Surgery & MedSpa — surgeon-led male body contouring, hair restoration, facial aesthetics, and metabolic wellness in Roswell, GA, established in 2016.",
+    'Atlantic Cosmetic Surgery & MedSpa — surgeon-led body contouring, hair restoration, facial aesthetics, and metabolic wellness in Roswell, GA, established in 2016.',
 };
 
 export default function AboutPage() {
@@ -19,17 +19,17 @@ export default function AboutPage() {
             <SectionHeading
               as="h1"
               index="About Atlantic"
-              title="Dedicated surgical and medical care built around men."
+              title="Dedicated surgical and medical care built around discretion."
             />
             <div className="mt-6 grid gap-5 text-base leading-7 text-muted sm:mt-8 sm:gap-6 sm:text-lg sm:leading-8">
               <p>
                 Established in Smyrna, Georgia in 2016 and now operating out of a modern private facility in Roswell,
-                Atlantic Men&rsquo;s Surgery &amp; MedSpa brings surgical contouring, FUE hair restoration, masculine
-                facial aesthetics, and metabolic wellness together under one roof.
+                Atlantic Cosmetic Surgery &amp; MedSpa brings surgical contouring, FUE hair restoration, facial
+                aesthetics, and metabolic wellness together under one roof.
               </p>
               <p>
-                Men rarely want an over-styled spa experience — they want straightforward medical guidance, natural
-                masculine proportions, and complete privacy. Our Roswell clinic is engineered around a discreet entrance,
+                Rather than an over-styled spa environment, patients come to us for straightforward medical guidance,
+                natural proportions, and complete privacy. Our Roswell clinic is engineered around a discreet entrance,
                 individualized anatomical planning, and attentive follow-through from consultation to recovery.
               </p>
             </div>
@@ -62,7 +62,7 @@ export default function AboutPage() {
               International Society of Hair Restoration Surgery (ISHRS).
             </p>
             <p>
-              Combining internal medicine foundations with microsurgical precision, Dr. Ladipo focuses on athletic male
+              Combining internal medicine foundations with microsurgical precision, Dr. Ladipo focuses on athletic
               torso and jawline contouring, scar-free FUE hair transplantation paired with Platelet-Rich Plasma (PRP)
               therapy, and physician-supervised metabolic care. Outside the practice, he participates in annual
               international medical missions providing reconstructive care to burn patients.

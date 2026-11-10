@@ -9,9 +9,9 @@ import { proceduresByCategory } from '@/lib/procedures';
 import { resultsFor } from '@/lib/results';
 
 export const metadata: Metadata = {
-  title: "Men's Cosmetic Surgery",
+  title: 'Cosmetic Surgery',
   description:
-    'Male Lipo 360, Chin & Jawline Liposuction, and J-Plasma® Renuvion skin tightening in Roswell, GA — surgical contouring tailored to male proportions.',
+    'Lipo 360, Chin & Jawline Liposuction, and J-Plasma® Renuvion skin tightening in Roswell, GA — surgical contouring tailored to natural athletic proportions.',
 };
 
 const surgery = proceduresByCategory('/cosmetic-surgery');
@@ -24,8 +24,8 @@ export default function CosmeticSurgeryPage() {
         <div className="container">
           <SectionHeading
             as="h1"
-            index="Cosmetic Surgery for Men"
-            title="Surgical contouring tailored to masculine proportions."
+            index="Cosmetic Surgery"
+            title="Surgical contouring tailored to athletic proportions."
             text="Targeted fat removal and subdermal skin contraction across the torso, abdomen, flanks, chin, and jawline. Candidacy, technique, risks, and recovery are discussed one-on-one during consultation."
           />
           <div className="mt-10 grid gap-5 sm:mt-12 md:grid-cols-2 lg:grid-cols-3">
@@ -58,7 +58,7 @@ export default function CosmeticSurgeryPage() {
           <div className="container">
             <SectionHeading
               index="Surgical Outcome"
-              title="Male Lipo 360 before and after."
+              title="Lipo 360 before and after."
               text="Individual results vary based on anatomy, skin elasticity, and post-operative care."
             />
             <div className="mt-10 max-w-xl">

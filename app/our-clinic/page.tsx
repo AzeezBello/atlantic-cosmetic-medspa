@@ -6,7 +6,7 @@ import SectionHeading from '@/components/section-heading';
 export const metadata: Metadata = {
   title: 'Our Roswell Clinic',
   description:
-    'A discreet surgical and medical facility for men at 1105 Upper Hembree Rd, Suite B, Roswell, GA — built for privacy, safety, and modern care.',
+    'A discreet surgical and medical facility at 1105 Upper Hembree Rd, Suite B, Roswell, GA — built for privacy, safety, and modern care.',
 };
 
 const details: [string, string][] = [
@@ -32,7 +32,7 @@ export default function OurClinicPage() {
               medical suite at 1105 Upper Hembree Rd, Suite B, Roswell, GA 30076.
             </p>
             <p>
-              The facility features a discreet private entrance so male patients can arrive and depart comfortably.
+              The facility features a discreet private entrance so patients can arrive and depart comfortably.
               Consultation rooms, hair-restoration suites, and operating areas are outfitted with modern surgical and
               energy-based technology, supporting every stage from pre-operative evaluation through recovery.
             </p>

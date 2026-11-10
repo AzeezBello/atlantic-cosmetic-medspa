@@ -73,7 +73,7 @@ export default function Hero() {
       <div className="container relative flex min-h-[calc(100svh-4rem)] flex-col justify-end pb-8 pt-36 sm:min-h-[calc(100svh-5rem)] sm:justify-between sm:py-20 lg:py-24">
         <div className="max-w-xl sm:pt-4 lg:pt-8">
           <p className="js-hero-fade font-mono text-[11px] tracking-wide text-sky sm:text-xs">
-            Roswell, Georgia &middot; Men&rsquo;s Surgical Practice
+            Roswell, Georgia &middot; Surgical &amp; Aesthetic Practice
           </p>
 
           <h1
@@ -89,8 +89,8 @@ export default function Hero() {
           </h1>
 
           <p className="js-hero-fade mt-4 max-w-lg text-sm leading-6 text-white/78 sm:mt-6 sm:text-base sm:leading-7">
-            Discreet surgical contouring, FUE hair restoration, and masculine aesthetics — planned around male anatomy
-            by Olanrewaju Ladipo, MD.
+            Discreet surgical contouring, FUE hair restoration, and facial aesthetics — planned with anatomical
+            precision by Olanrewaju Ladipo, MD.
           </p>
 
           <div className="js-hero-fade mt-6 flex flex-col gap-2.5 sm:mt-9 sm:flex-row sm:flex-wrap sm:items-center sm:gap-6">
@@ -99,7 +99,7 @@ export default function Hero() {
               className="link-arrow inline-flex min-h-11 items-center justify-center gap-2 text-sm font-medium text-white/85 transition-colors hover:text-white sm:justify-start"
               href="/results"
             >
-              View Male Results <ArrowRight aria-hidden="true" size={15} />
+              View Results <ArrowRight aria-hidden="true" size={15} />
             </Link>
           </div>
         </div>

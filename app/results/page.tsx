@@ -5,9 +5,9 @@ import SectionHeading from '@/components/section-heading';
 import { results } from '@/lib/results';
 
 export const metadata: Metadata = {
-  title: 'Male Patient Results',
+  title: 'Patient Results',
   description:
-    'Verified male before and after results from Atlantic Men’s Surgery & MedSpa — Male Lipo 360 torso contouring and FUE hair transplantation.',
+    'Verified before and after results from Atlantic Cosmetic Surgery & MedSpa — Lipo 360 torso contouring and FUE hair transplantation.',
 };
 
 export default function ResultsPage() {
@@ -17,9 +17,9 @@ export default function ResultsPage() {
         <div className="container">
           <SectionHeading
             as="h1"
-            index="Male Clinical Gallery"
-            title="Real male patients. Verified outcomes."
-            text="A curated clinical gallery of male torso sculpting and FUE hair restoration performed at our Roswell practice. Individual results vary."
+            index="Clinical Gallery"
+            title="Real patients. Verified outcomes."
+            text="A curated clinical gallery of torso sculpting and FUE hair restoration performed at our Roswell practice. Individual results vary."
           />
           <div className="mt-12 grid items-start gap-6 md:grid-cols-2">
             {results.map((result) => (

@@ -5,7 +5,7 @@ import BookButton from '@/components/book-button';
 const helpfulLinks = [
   ['Cosmetic Surgery', '/cosmetic-surgery'],
   ['Hair Restoration', '/hair-restoration'],
-  ["Men's Aesthetics", '/aesthetics'],
+  ['Aesthetics', '/aesthetics'],
   ['Wellness', '/wellness'],
 ];
 
@@ -19,7 +19,7 @@ export default function NotFound() {
           </p>
           <h1 className="mt-6 text-3xl leading-tight sm:text-5xl">This page isn&rsquo;t here.</h1>
           <p className="mx-auto mt-4 max-w-lg text-base leading-7 text-muted sm:text-lg sm:leading-8">
-            The route may have moved as we focused our catalog exclusively on male procedures and clinical care.
+            The page you are looking for may have moved or been updated.
           </p>
 
           <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
@@ -30,8 +30,8 @@ export default function NotFound() {
             <BookButton className="btn btn-outline w-full sm:w-auto" />
           </div>
 
-          <nav aria-label="Explore male services" className="mt-10 border-t border-line pt-6">
-            <p className="font-mono text-xs text-muted">Explore Men&rsquo;s Services</p>
+          <nav aria-label="Explore services" className="mt-10 border-t border-line pt-6">
+            <p className="font-mono text-xs text-muted">Explore Services</p>
             <ul className="mt-4 flex flex-wrap justify-center gap-x-6 gap-y-3">
               {helpfulLinks.map(([label, href]) => (
                 <li key={href}>

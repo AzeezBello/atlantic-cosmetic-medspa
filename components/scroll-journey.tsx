@@ -15,13 +15,13 @@ const stages = [
     title: 'Torso & Jawline Surgery',
     subtitle: 'Athletic body & profile sculpting',
     description:
-      'Male Lipo 360, submental chin liposuction under local sedation, and Renuvion J-Plasma® skin contraction engineered around straighter, defined masculine lines.',
-    procedures: ['Male Lipo 360', 'Chin & Jawline Liposuction', 'J-Plasma® Tightening'],
+      'Lipo 360, submental chin liposuction under local sedation, and Renuvion J-Plasma® skin contraction engineered around straighter, defined athletic lines.',
+    procedures: ['Lipo 360', 'Chin & Jawline Liposuction', 'J-Plasma® Tightening'],
     href: '/cosmetic-surgery',
     cta: 'Explore Cosmetic Surgery',
     image: '/images/results/lipo-360-male-front.avif',
-    imageAlt: 'Male Lipo 360 before and after torso contouring result',
-    caption: 'Clinical Outcome — Male Lipo 360',
+    imageAlt: 'Lipo 360 before and after torso contouring result',
+    caption: 'Clinical Outcome — Lipo 360',
   },
   {
     title: 'FUE Hair Restoration',
@@ -32,19 +32,19 @@ const stages = [
     href: '/hair-restoration',
     cta: 'Explore Hair Restoration',
     image: '/images/results/hair-transplant-1.png',
-    imageAlt: 'Male FUE hair transplant before and after hairline restoration',
+    imageAlt: 'FUE hair transplant before and after hairline restoration',
     caption: 'Clinical Outcome — FUE Hair Transplant',
   },
   {
-    title: "Men's Facial Aesthetics",
+    title: 'Facial Aesthetics',
     subtitle: 'Angular structure without an overdone look',
     description:
       'Targeted mandibular and chin fillers, conservative neurotoxin dosing for forehead creases and masseter clenching, Kybella®, and Endolift® subdermal laser tightening.',
-    procedures: ["Men's Injectables & Jawline Filler", 'Kybella® Submental Reduction', 'Endolift® Laser Remodeling'],
+    procedures: ['Injectables & Jawline Filler', 'Kybella® Submental Reduction', 'Endolift® Laser Remodeling'],
     href: '/aesthetics',
-    cta: "Explore Men's Aesthetics",
+    cta: 'Explore Aesthetics',
     image: '/images/mens-jawline.avif',
-    imageAlt: 'Editorial profile portrait illustrating masculine jawline and neck definition',
+    imageAlt: 'Editorial profile portrait illustrating jawline and neck definition',
     caption: 'Editorial Focus — Jawline & Lower-Face Structure',
   },
   {
@@ -54,9 +54,9 @@ const stages = [
       'Weekly GLP-1 (Semaglutide) and Phentermine protocols for visceral fat loss or pre-surgical BMI readiness, alongside IV performance hydration and biologic regenerative care.',
     procedures: ['GLP-1 Medical Weight Loss', 'IV Performance Hydration', 'Regenerative Biologic Therapy'],
     href: '/wellness',
-    cta: "Explore Men's Wellness",
+    cta: 'Explore Wellness',
     image: '/images/mens-hair-wellness.avif',
-    imageAlt: 'Composed male patient in a modern architectural wellness clinic lounge',
+    imageAlt: 'Composed patient in a modern architectural wellness clinic lounge',
     caption: 'Editorial Focus — Physician-Guided Longevity & Recovery',
   },
 ] as const;
@@ -109,7 +109,7 @@ export default function ScrollJourney() {
         <div className="max-w-2xl">
           <div className="index-tag !text-sky">Clinical Architecture</div>
           <h2 className="text-[clamp(1.75rem,4.5vw,2.85rem)] leading-[1.1] tracking-[-0.02em] text-white">
-            Four disciplines engineered exclusively around male anatomy.
+            Four disciplines engineered around natural structure.
           </h2>
           <p className="mt-4 text-base leading-7 text-white/70 sm:text-lg sm:leading-8">
             Surgery, hair restoration, facial structure, and metabolic wellness planned together under one roof in

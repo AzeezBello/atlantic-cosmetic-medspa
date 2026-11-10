@@ -4,7 +4,7 @@ import SectionHeading from '@/components/section-heading';
 
 export const metadata: Metadata = {
   title: 'Payment Plans',
-  description: "Flexible financing and payment options for male procedures at Atlantic Men's Surgery & MedSpa.",
+  description: 'Flexible financing and payment options at Atlantic Cosmetic Surgery & MedSpa.',
 };
 
 const options = [

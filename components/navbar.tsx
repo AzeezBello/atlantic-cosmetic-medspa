@@ -9,9 +9,9 @@ import BrandMark from '@/components/brand-mark';
 import { proceduresByCategory } from '@/lib/procedures';
 
 const services: [string, string, string][] = [
-  ['Cosmetic Surgery', '/cosmetic-surgery', 'Male Lipo 360, jawline & J-Plasma®'],
+  ['Cosmetic Surgery', '/cosmetic-surgery', 'Lipo 360, jawline & J-Plasma®'],
   ['Hair Restoration', '/hair-restoration', 'Scar-free FUE transplant + PRP'],
-  ['Aesthetics', '/aesthetics', "Men's injectables, Kybella® & Endolift®"],
+  ['Aesthetics', '/aesthetics', 'Injectables, Kybella® & Endolift®'],
   ['Wellness', '/wellness', 'GLP-1 weight loss, IV & regenerative'],
 ];
 
@@ -77,7 +77,7 @@ export default function Navbar() {
       <div className="container flex h-16 items-center justify-between sm:h-20">
         <Link
           href="/"
-          aria-label="Atlantic Men's Surgery & MedSpa home"
+          aria-label="Atlantic Cosmetic Surgery & MedSpa home"
           className="inline-flex shrink-0 items-center transition-opacity hover:opacity-85"
         >
           <BrandMark tone="dark" />
@@ -103,7 +103,7 @@ export default function Navbar() {
               isServicesActive || servicesOpen ? 'text-ink after:scale-x-100' : 'text-muted'
             }`}
           >
-            Men&rsquo;s Services
+            Services
             <ChevronDown
               aria-hidden="true"
               size={14}
@@ -200,7 +200,7 @@ export default function Navbar() {
                 isServicesActive ? 'font-semibold text-blue' : 'font-medium text-ink'
               }`}
             >
-              <span>Men&rsquo;s Services</span>
+              <span>Services</span>
               <ChevronDown
                 aria-hidden="true"
                 size={16}

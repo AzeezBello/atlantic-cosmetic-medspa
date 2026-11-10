@@ -5,11 +5,11 @@ import Footer from '@/components/footer';
 
 export const metadata: Metadata = {
   title: {
-    default: "Atlantic Men's Surgery & MedSpa",
-    template: "%s | Atlantic Men's Surgery & MedSpa",
+    default: 'Atlantic Cosmetic Surgery & MedSpa',
+    template: '%s | Atlantic Cosmetic Surgery & MedSpa',
   },
   description:
-    'Discreet male cosmetic surgery, FUE hair restoration, masculine jawline aesthetics, and physician-guided metabolic wellness in Roswell, GA.',
+    'Discreet cosmetic surgery, FUE hair restoration, jawline aesthetics, and physician-guided metabolic wellness in Roswell, GA.',
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

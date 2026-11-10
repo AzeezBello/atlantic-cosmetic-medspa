@@ -26,7 +26,7 @@ export default function BrandMark({ tone = 'dark', className = '' }: BrandMarkPr
       <span className="flex flex-col leading-none">
         <span className={`font-serif text-lg tracking-tight sm:text-xl ${primaryText}`}>Atlantic</span>
         <span className={`mt-1 text-[10px] font-medium sm:text-[11px] ${secondaryText}`}>
-          Men&rsquo;s Surgery &amp; MedSpa
+          Cosmetic Surgery &amp; MedSpa
         </span>
       </span>
     </span>

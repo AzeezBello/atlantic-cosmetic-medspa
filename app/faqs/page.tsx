@@ -5,7 +5,7 @@ import SectionHeading from '@/components/section-heading';
 
 export const metadata: Metadata = {
   title: 'FAQs',
-  description: "Frequently asked questions about male procedures at Atlantic Men's Surgery & MedSpa.",
+  description: 'Frequently asked questions about procedures at Atlantic Cosmetic Surgery & MedSpa.',
 };
 
 const faqs: { question: string; answer: string }[] = [
@@ -15,9 +15,9 @@ const faqs: { question: string; answer: string }[] = [
       'No. Follicular Unit Extraction (FUE) harvests individual hair follicles rather than removing a strip of scalp, avoiding the horizontal linear scar associated with strip methods so hair can still be worn cropped or faded once healed.',
   },
   {
-    question: 'Is Male Lipo 360 a weight-loss procedure?',
+    question: 'Is Lipo 360 a weight-loss procedure?',
     answer:
-      'No. Male Lipo 360 is a precision body-contouring procedure designed to remove stubborn fat deposits across the abdomen, obliques, flanks, and lower back for a leaner V-taper frame. Men looking to reduce BMI before surgery can begin with our physician-guided Semaglutide or Phentermine weight-loss program.',
+      'No. Lipo 360 is a precision body-contouring procedure designed to remove stubborn fat deposits across the abdomen, obliques, flanks, and lower back for a leaner V-taper frame. Patients looking to reduce BMI before surgery can begin with our physician-guided Semaglutide or Phentermine weight-loss program.',
   },
   {
     question: 'How do I choose between Chin Liposuction and Kybella® for jawline definition?',
@@ -25,9 +25,9 @@ const faqs: { question: string; answer: string }[] = [
       'Chin liposuction physically removes submental fat in a single procedure typically completed in under an hour under local sedation. Kybella® is a non-surgical injectable option using synthetic deoxycholic acid across a tailored series of office sessions. Dr. Ladipo evaluates skin elasticity and submental volume during consultation to recommend the right fit.',
   },
   {
-    question: 'Will neurotoxins or jawline fillers look unnatural on a male face?',
+    question: 'Will neurotoxins or jawline fillers look unnatural?',
     answer:
-      'Male injectable planning uses conservative dosing and angular placement tailored to masculine bone structure — softening deep forehead lines or masseter jaw tension without freezing expression, and reinforcing chin or mandibular definition rather than adding rounded volume.',
+      'Injectable planning uses conservative dosing and angular placement tailored to natural bone structure — softening deep forehead lines or masseter jaw tension without freezing expression, and reinforcing chin or mandibular definition rather than adding rounded volume.',
   },
   {
     question: 'Does adding J-Plasma® (Renuvion) increase liposuction downtime?',

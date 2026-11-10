@@ -70,7 +70,7 @@ export default async function ProcedurePage({ params }: { params: Promise<{ slug
             <SectionHeading
               index="Clinical Outcomes"
               title={`${procedure.name} before and after.`}
-              text="Unretouched male patient results. Individual outcomes vary."
+              text="Unretouched patient results. Individual outcomes vary."
             />
             <div className="mt-10 grid items-start gap-5 md:grid-cols-2 lg:grid-cols-3">
               {gallery.map((result) => (

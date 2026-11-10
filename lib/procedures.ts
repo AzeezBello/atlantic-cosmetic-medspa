@@ -13,14 +13,14 @@ export type Procedure = {
 export const procedures: Procedure[] = [
   {
     slug: 'lipo-360',
-    name: 'Male Lipo 360',
+    name: 'Lipo 360',
     category: 'Cosmetic Surgery',
     categoryHref: '/cosmetic-surgery',
     summary: 'Circumferential torso sculpting targeting the abdomen, chest border, flanks, and lower back for a leaner athletic frame.',
-    highlights: ['Abdomen, love handles & lower back', 'Tailored to masculine V-taper proportions', 'Body contouring — not weight loss'],
+    highlights: ['Abdomen, love handles & lower back', 'Tailored to athletic V-taper proportions', 'Body contouring — not weight loss'],
     description: [
-      'Male Lipo 360 sculpts and defines the upper and mid-torso through targeted fat removal across the abdomen, obliques, flanks (love handles), and lower back — engineered around straighter, athletic masculine lines rather than curved proportions.',
-      'Ideal candidates are men in good overall health who meet BMI guidelines and want to eliminate stubborn fat pockets that resist training and nutrition. Lipo 360 delivers immediate structural definition as swelling subsides and is planned as precision body contouring rather than a substitute for weight loss.',
+      'Lipo 360 sculpts and defines the upper and mid-torso through targeted fat removal across the abdomen, obliques, flanks (love handles), and lower back — engineered around straighter, athletic lines.',
+      'Ideal candidates are in good overall health, meet BMI guidelines, and want to eliminate stubborn fat pockets that resist training and nutrition. Lipo 360 delivers immediate structural definition as swelling subsides and is planned as precision body contouring rather than a substitute for weight loss.',
     ],
   },
   {
@@ -32,7 +32,7 @@ export const procedures: Procedure[] = [
     highlights: ['Completed in under an hour', 'Local sedation with rapid recovery', 'Sharpens neck & jawline profile'],
     description: [
       'Chin and jawline liposuction removes submental fat beneath the chin and along the upper neck to create a cleaner cervicomental angle, reduce fullness, and bring out a stronger, more angular lower face.',
-      'Submental fullness in men is frequently driven by genetics as much as body composition, persisting even at lean body weights. The procedure is typically completed in under an hour using local sedation with minimal downtime.',
+      'Submental fullness is frequently driven by genetics as much as body composition, persisting even at lean body weights. The procedure is typically completed in under an hour using local sedation with minimal downtime.',
     ],
   },
   {
@@ -40,10 +40,10 @@ export const procedures: Procedure[] = [
     name: 'J-Plasma® Skin Tightening',
     category: 'Cosmetic Surgery',
     categoryHref: '/cosmetic-surgery',
-    summary: 'Renuvion helium-plasma and radiofrequency skin contraction paired with male liposuction for firmer torso and neck contours.',
+    summary: 'Renuvion helium-plasma and radiofrequency skin contraction paired with liposuction for firmer torso and neck contours.',
     highlights: ['Helium plasma + RF energy', 'Minimal entry points, no extra downtime', 'Chest, abdomen, flanks, chin & neck'],
     description: [
-      'J-Plasma (Renuvion) is an energy-based subdermal skin-tightening technology frequently paired with male liposuction so skin contracts cleanly over newly sculpted contours. Cold helium plasma and radiofrequency energy are delivered through tiny entry points to trigger immediate tissue contraction and ongoing collagen remodeling.',
+      'J-Plasma (Renuvion) is an energy-based subdermal skin-tightening technology frequently paired with liposuction so skin contracts cleanly over newly sculpted contours. Cold helium plasma and radiofrequency energy are delivered through tiny entry points to trigger immediate tissue contraction and ongoing collagen remodeling.',
       'Used across the chest border, abdomen, flanks, back, chin, and neck, J-Plasma adds definition with minimal scarring and without extending liposuction recovery time. Candidacy is evaluated during consultation based on skin elasticity and anatomy.',
     ],
   },
@@ -55,20 +55,20 @@ export const procedures: Procedure[] = [
     summary: 'Individual follicular unit extraction paired with PRP therapy — natural hairline density with zero linear strip scar.',
     highlights: ['Short-fade & buzz-cut friendly', 'No linear donor scar', 'Combined with PRP therapy'],
     description: [
-      'Follicular Unit Extraction (FUE) restores receding temples, frontal hairlines, and thinning crowns by harvesting individual follicles from permanent donor zones and placing them at natural masculine growth angles.',
-      'Because FUE avoids strip-harvesting incisions, there is no linear scar across the back of the head — allowing men to continue wearing clean fades or cropped styles with confidence.',
+      'Follicular Unit Extraction (FUE) restores receding temples, frontal hairlines, and thinning crowns by harvesting individual follicles from permanent donor zones and placing them at natural growth angles.',
+      'Because FUE avoids strip-harvesting incisions, there is no linear scar across the back of the head — allowing you to continue wearing clean fades or cropped styles with confidence.',
       'Procedures may be paired with Platelet-Rich Plasma (PRP) therapy to support graft survival, scalp healing, and native hair caliber. Hair-loss pattern, donor density, and long-term hairline design are mapped one-on-one with Dr. Ladipo during consultation.',
     ],
   },
   {
     slug: 'injectable-treatments',
-    name: "Men's Injectables",
+    name: 'Injectables & Fillers',
     category: 'Aesthetics',
     categoryHref: '/aesthetics',
-    summary: 'Masculine jawline and chin filler alongside tailored neurotoxins for forehead lines, brow heaviness, and jaw clenching.',
+    summary: 'Structural jawline and chin filler alongside tailored neurotoxins for forehead lines, brow heaviness, and jaw clenching.',
     highlights: ['Angular chin & jawline structure', 'Natural movement — never frozen', 'Masseter clenching & line relief'],
     description: [
-      'Injectable treatments for men require distinct dosing and anatomical placement to preserve strong, natural facial character. Structural dermal fillers reinforce chin projection and mandibular definition with immediate results and minimal downtime.',
+      'Injectable treatments require careful dosing and anatomical placement to preserve strong, natural facial character. Structural dermal fillers reinforce chin projection and mandibular definition with immediate results and minimal downtime.',
       'Neurotoxins such as Botox® soften deep forehead creases, glabellar frown lines, and crow’s feet while maintaining natural expression, and can also relieve masseter tension from teeth grinding. Full neurotoxin results settle within two weeks.',
     ],
   },
@@ -93,7 +93,7 @@ export const procedures: Procedure[] = [
     highlights: ['Subdermal micro-optical fiber', 'Sharpens lower face & neck', 'Minimal recovery window'],
     description: [
       'Endolift® delivers targeted laser energy beneath the skin via hair-thin micro-optical fibers to stimulate deep collagen contraction and selective fat remodeling without surgical incisions.',
-      'For men noticing early jowling, softening along the jawline and neck, or mild skin laxity on the abdomen, Endolift® offers measurable tightening with far less downtime than surgical lifting. Consultation determines whether laser remodeling or surgical contouring best fits your anatomy.',
+      'For patients noticing early jowling, softening along the jawline and neck, or mild skin laxity on the abdomen, Endolift® offers measurable tightening with far less downtime than surgical lifting. Consultation determines whether laser remodeling or surgical contouring best fits your anatomy.',
     ],
   },
   {
@@ -106,7 +106,7 @@ export const procedures: Procedure[] = [
     description: [
       'When structured training and nutrition hit a plateau, physician-directed medical weight loss provides targeted metabolic support using clinically proven medications including Semaglutide and Phentermine.',
       'Semaglutide activates GLP-1 receptors via once-weekly injections to regulate glucose response, quiet persistent appetite signals, and reduce visceral body fat steadily alongside strength training and protein-focused nutrition.',
-      'Men utilize the program both for standalone body-composition goals and to reach optimal target BMI ahead of Lipo 360 or torso contouring.',
+      'Patients utilize the program both for standalone body-composition goals and to reach optimal target BMI ahead of Lipo 360 or torso contouring.',
     ],
   },
   {
@@ -130,7 +130,7 @@ export const procedures: Procedure[] = [
     highlights: ['Biologic signaling factors', 'Standalone or paired with procedures', 'Individualized clinical review'],
     description: [
       'Regenerative medicine focuses on biologic materials and cellular signaling factors that support tissue repair, structural skin quality, and post-procedure recovery.',
-      'For male patients, regenerative therapies may be integrated alongside hair restoration, laser tightening, or aesthetic care to address texture, tone, and age-related tissue changes.',
+      'Regenerative therapies may be integrated alongside hair restoration, laser tightening, or aesthetic care to address texture, tone, and age-related tissue changes.',
       'Outcomes vary by individual biology and cannot guarantee specific cosmetic results — exact biologic sources, processing standards, and regulatory status are reviewed transparently during consultation.',
     ],
   },

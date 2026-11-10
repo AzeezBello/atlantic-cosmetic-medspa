@@ -8,9 +8,9 @@ import SpotlightCard from '@/components/spotlight-card';
 import { proceduresByCategory } from '@/lib/procedures';
 
 export const metadata: Metadata = {
-  title: "Men's Metabolic & Recovery Wellness",
+  title: 'Metabolic & Recovery Wellness',
   description:
-    'Physician-guided GLP-1 (Semaglutide) medical weight loss, IV performance hydration, and biologic regenerative treatments for men in Roswell, GA.',
+    'Physician-guided GLP-1 (Semaglutide) medical weight loss, IV performance hydration, and biologic regenerative treatments in Roswell, GA.',
 };
 
 const wellness = proceduresByCategory('/wellness');
@@ -23,7 +23,7 @@ export default function WellnessPage() {
           <div className="grid gap-8 lg:grid-cols-[minmax(0,1fr)_auto] lg:items-center lg:gap-10">
             <SectionHeading
               as="h1"
-              index="Atlantic Men's Wellness"
+              index="Atlantic Wellness"
               title="Metabolic performance and cellular recovery."
               text="Atlantic Wellness Center pairs physician-supervised GLP-1 weight management, targeted IV hydration, and regenerative biologic protocols under one roof."
             />
@@ -68,7 +68,7 @@ export default function WellnessPage() {
           <div className="order-2 relative aspect-[4/5] overflow-hidden rounded-2xl border border-line bg-white sm:aspect-[3/4] lg:order-1">
             <Image
               src="/images/mens-hair-wellness.avif"
-              alt="Composed male patient seated in a calm architectural clinic lounge"
+              alt="Composed patient seated in a calm architectural clinic lounge"
               fill
               sizes="(min-width: 1024px) 40vw, 100vw"
               className="object-cover object-top"
@@ -78,7 +78,7 @@ export default function WellnessPage() {
             <SectionHeading
               index="Integrated Care"
               title="Structured support before and after procedures."
-              text="Many men begin with GLP-1 metabolic management to hit target body composition ahead of Male Lipo 360, or pair IV micronutrient therapy and regenerative signaling factors with FUE hair restoration."
+              text="Many patients begin with GLP-1 metabolic management to hit target body composition ahead of Lipo 360, or pair IV micronutrient therapy and regenerative signaling factors with FUE hair restoration."
             />
           </div>
         </div>

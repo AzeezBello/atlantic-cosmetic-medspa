@@ -8,9 +8,9 @@ import { getProcedure } from '@/lib/procedures';
 import { resultsFor } from '@/lib/results';
 
 export const metadata: Metadata = {
-  title: 'Male Hair Restoration (FUE + PRP)',
+  title: 'Hair Restoration (FUE + PRP)',
   description:
-    'Follicular Unit Extraction (FUE) hair transplantation with PRP therapy for men in Roswell, GA — natural hairline density with zero linear strip scar.',
+    'Follicular Unit Extraction (FUE) hair transplantation with PRP therapy in Roswell, GA — natural hairline density with zero linear strip scar.',
 };
 
 const fue = getProcedure('fue-hair-transplant')!;
@@ -32,7 +32,7 @@ export default function HairRestorationPage() {
             />
           </div>
           <div className="order-1 lg:order-2">
-            <div className="index-tag">Male Hair Restoration</div>
+            <div className="index-tag">Hair Restoration</div>
             <h1 className="text-[clamp(2rem,6vw,3.5rem)] leading-[1.08] tracking-[-0.02em]">
               Rebuild a natural, short-fade friendly hairline.
             </h1>
@@ -58,7 +58,7 @@ export default function HairRestorationPage() {
         <div className="container">
           <SectionHeading
             index="Verified FUE Outcomes"
-            title="Male hairline & crown restoration."
+            title="Hairline & crown restoration."
             text="Individual results vary based on donor density, hair-loss pattern, and healing."
           />
           <div className="mt-10 grid gap-5 md:grid-cols-2">
